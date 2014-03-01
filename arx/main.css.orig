@@ -1,27 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
 
 
-@media screen and (max-width: 680px){
+<<<<<<< HEAD
+@media screen and (max-width: 640px){
   .Hide{
     display: none;
-  } 
-  .nav{
-
-  } 
-
-
- #Blog{
-    margin-left: 5%;
- }
+  }  
 
 }
 
 
+=======
 
 html {
   <!-- background: #111; -->
 }
 
+>>>>>>> 76e1fb1fb9c7ea94ba64c30ebc661e05763577e7
 body{
   background:url(img/bg_chalk.jpg) no-repeat;
   background-attachment: fixed;
@@ -66,19 +61,27 @@ body{
 
 
 .nav ul .inPage{
-  margin: -16px -16px 0px 0px;
   float:left;
 }
+
+
+
 .nav ul .icon{
   float:right;
 }
+
 .nav ul li {
-  font-size: medium;
+
+  font-size: large;
 }
+
+
+/* ===== HOME ABOUT ===== */
 .nav ul li a {
-text-decoration:none; 
+  text-decoration:none; 
  color:#cdcdcd;
 }
+
 .nav ul li.inPage a {
  padding: 16px 25px 16px 25px;
 }
@@ -124,17 +127,17 @@ text-decoration:none;
         background: url(img/radkeySocialIcons.png) -80px -0px no-repeat;
       }
 
-    .nav li.icon {
+          .nav li.icon {
       padding: 16px 7px 18px 7px;
       line-height: 16px;
     }
 
-    li.icon a {
+         li.icon a {
         display: block;
         width: 16px;
-        background: url(img/radkeySocialIcons.png) 0 0 no-repeat;
+        background: url(../img/radkeySocialIcons.png) 0 0 no-repeat;
         font-size: 0;
-    }
+      }
 
          .nav li:hover {
         background: rgba(48,48,48,.9);
@@ -142,5 +145,5 @@ text-decoration:none;
     }
 
     #homeAbout{
-      margin-left: 10px;
+      margin-left: 5%;
     }
