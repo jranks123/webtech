@@ -1,0 +1,14 @@
+         .nav li:hover {
+        background: rgba(255,255,255,.1);
+     /* background: rgba(174,0,0,.9);*/
+    }
+
+    body{
+  background:url(bgheader2.jpg) no-repeat center center fixed;
+  /*background-attachment: fixed;
+  background-position-x: center !important;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
