@@ -1,10 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
 
+
+
+html {
+  <!-- background: #111; -->
+}
+
 body{
   background:url(img/bg_chalk.jpg) no-repeat;
   background-attachment: fixed;
+  background-position-x: center !important;
 }
 
+  body.lightboxed {
+    height: 100%;
+    overflow: hidden;
+  }
 .nav {
   top:0px;
   left:0px;
@@ -61,7 +72,7 @@ body{
 }
 
 .nav ul li.inPage a {
- padding: 16px 25px 20px 25px;
+ padding: 16px 25px 16px 25px;
 }
 
 
@@ -72,8 +83,8 @@ body{
 .nav ul li a:active {text-decoration:none; }
 
   .nav li {
-    margin: -15px 0px 0px 0px;
-    padding: 14px 0px 12px 0px;
+    margin: -16px 0px 0px 0px;
+    padding: 12px 0px 14px 0px;
     float: left;
     list-style: none;
     font-weight: 100;
@@ -125,4 +136,3 @@ body{
     #homeAbout{
       margin-left: 5%;
     }
-
