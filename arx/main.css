@@ -1,5 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
 
+
+@media screen and (max-width: 640px){
+  .Hide{
+    display: none;
+  }  
+
+}
+
+
 body{
   background:url(img/bg_chalk.jpg) no-repeat;
   background-attachment: fixed;
