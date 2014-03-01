@@ -39,7 +39,7 @@ body{
   width:100%;
   position:fixed;
   /*background-color: #222222;*/
-  background: rgba(0,0,0,.75);
+  background: rgba(255,255,255,.77);
   z-index:2;
   display:block;
   font-family:Courier;
@@ -80,7 +80,7 @@ body{
 }
 .nav ul li a {
 text-decoration:none; 
- color:#cdcdcd;
+ color:#1e1e1e;
 }
 
 
@@ -92,7 +92,7 @@ text-decoration:none;
 
 .nav ul li a:link {text-decoration:none;}
 .nav ul li a:visited {text-decoration:none;}
-.nav ul li a:hover {text-decoration:none; color:white;}
+.nav ul li a:hover {text-decoration:none; color:black;}
 .nav ul li a:active {text-decoration:none; }
 
   .nav li {
@@ -104,29 +104,29 @@ text-decoration:none;
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
   }
 
     .nav a {
       color: #000;
     }
     li.icon a {
-      background: url(img/radkeySocialIcons.png) 0 -0px no-repeat;
+      background: url(img/radkeySocialIcons.png) 0 -16px no-repeat;
     }
       li.icon a.twitter {
-        background: url(img/radkeySocialIcons.png) -16px -0px no-repeat;
+        background: url(img/radkeySocialIcons.png) -16px -16px no-repeat;
       }
       li.icon a.instagram {
-        background: url(img/radkeySocialIcons.png) -32px -0px no-repeat;
+        background: url(img/radkeySocialIcons.png) -32px -16px no-repeat;
       }
       li.icon a.facebook {
-        background: url(img/radkeySocialIcons.png) -0 -0px no-repeat;
+        background: url(img/radkeySocialIcons.png) -0 -16px no-repeat;
       }
       li.icon a.youtube {
-        background: url(img/radkeySocialIcons.png) -64px -0px no-repeat;
+        background: url(img/radkeySocialIcons.png) -64px -16px no-repeat;
       }
       li.icon a.soundcloud {
-        background: url(img/radkeySocialIcons.png) -80px -0px no-repeat;
+        background: url(img/radkeySocialIcons.png) -80px -16px no-repeat;
       }
 
     .nav li.icon {
@@ -139,11 +139,6 @@ text-decoration:none;
         width: 16px;
         background: url(img/radkeySocialIcons.png) 0 0 no-repeat;
         font-size: 0;
-    }
-
-         .nav li:hover {
-        background: rgba(48,48,48,.9);
-     /* background: rgba(174,0,0,.9);*/
     }
 
     #homeAbout{
