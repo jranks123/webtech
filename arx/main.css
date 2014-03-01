@@ -5,13 +5,11 @@
   .Hide{
     display: none;
   } 
-  .nav{
 
-  } 
 
 
  #Blog{
-    margin-left: 5%;
+    margin-left: 8px;
  }
 
 }
@@ -49,19 +47,27 @@ body{
 
 .nav .logo{
   position: absolute;
-  left: 10px;
+  margin-left: 10px;
+  margin-right:10px;
   width: auto;
   cursor: pointer;
   opacity: .8;
   padding-right: 0px;
   margin-right: 0px;
+}
 
-
+.nav .logo a{
+  background: url(img/logo_small_black.png) 0 0 no-repeat;
+  font-size:0;
+  display: block;
+  width:34px;
+  height:49px;
+  opacity:0.5;
 }
 
 
 
-.nav .logo:hover{
+.nav .logo a:hover{
   opacity:1;
 }
 
@@ -129,6 +135,7 @@ text-decoration:none;
         background: url(img/radkeySocialIcons.png) -80px -16px no-repeat;
       }
 
+
     .nav li.icon {
       padding: 16px 7px 18px 7px;
       line-height: 16px;
@@ -142,5 +149,5 @@ text-decoration:none;
     }
 
     #homeAbout{
-      margin-left: 15px;
+      margin-left: 8px;
     }
