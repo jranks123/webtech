@@ -174,7 +174,9 @@ li.icon a {
   height: 730px;
   text-align: center;
   overflow: hidden;
-  z-index: 1;
+  position: relative;
+  z-index: 0;
+
 
 }
 
@@ -217,7 +219,7 @@ li.icon a {
   width:100%;
   text-align: center;
   position: relative;
-  z-index: 1; 
+  z-index: 0; 
 }
 #band #bandp {
   width:100%;
