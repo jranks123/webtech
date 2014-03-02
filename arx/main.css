@@ -2,10 +2,27 @@
 
 
 @media screen and (max-width: 680px){
-  .Hide{
-    display: none;
-  } 
 
+.nav ul li {
+  font-size: x-small;
+}
+
+
+
+
+
+
+ li.icon {
+    display:none;
+ }
+}
+
+
+@media screen and (min-width: 681px) and (max-width: 2000px){
+
+.nav ul li {
+  font-size: medium;
+}
 
 
  #Blog{
@@ -52,8 +69,7 @@ body{
   width: auto;
   cursor: pointer;
   opacity: .8;
-  padding-right: 0px;
-  margin-right: 0px;
+
 }
 
 .nav .logo a{
@@ -81,9 +97,7 @@ body{
 .nav ul .icon{
   float:right;
 }
-.nav ul li {
-  font-size: medium;
-}
+
 .nav ul li a {
 text-decoration:none; 
  color:#1e1e1e;
@@ -93,6 +107,7 @@ text-decoration:none;
 .nav ul li.inPage a {
  padding: 16px 16px 16px 16px;
 }
+
 
 
 
