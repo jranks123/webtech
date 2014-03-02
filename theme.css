@@ -15,17 +15,24 @@ body{
   display: block;
   width:34px;
   height:49px;
-  opacity:0.5;
+  opacity:0.77;
 }
 
 .nav {
   background: rgba(255,255,255,.77);
 }
 
+.nav ul li a {
+text-decoration:none; 
+ color:#000;
+}
+
 .nav li:hover {
   background: rgba(250,239,116,.4);
   /* background: rgba(174,0,0,.9);*/
 }
+
+.nav ul li a:hover {text-decoration:none; color:#000;}
 
 li.icon a {
   background: url(img/radkeySocialIcons.png) 0 -16px no-repeat;

@@ -105,66 +105,68 @@ text-decoration:none;
 
 .nav ul li a:link {text-decoration:none;}
 .nav ul li a:visited {text-decoration:none;}
-.nav ul li a:hover {text-decoration:none; color:black;}
+.nav ul li a:hover {text-decoration:none; color:#fff;}
 .nav ul li a:active {text-decoration:none; }
 
-  .nav li {
-    margin: -16px 0px 0px 0px;
-    padding: 12px 0px 14px 0px;
-    float: left;
-    list-style: none;
-    font-weight: 100;
-    font-size: 14px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #000;
-  }
+.nav li {
+  margin: -16px 0px 0px 0px;
+  padding: 12px 0px 14px 0px;
+  float: left;
+  list-style: none;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000;
+}
 
-    .nav a {
-      color: #000;
-    }
-
-
-    li.icon a {
-      background: url(img/radkeySocialIcons.png) 0 -0px no-repeat;
-    }
-      li.icon a.twitter {
-        background: url(img/radkeySocialIcons.png) -16px -0px no-repeat;
-      }
-      li.icon a.instagram {
-        background: url(img/radkeySocialIcons.png) -32px -0px no-repeat;
-      }
-      li.icon a.facebook {
-        background: url(img/radkeySocialIcons.png) -0 -0px no-repeat;
-      }
-      li.icon a.youtube {
-        background: url(img/radkeySocialIcons.png) -64px -0px no-repeat;
-      }
-      li.icon a.soundcloud {
-        background: url(img/radkeySocialIcons.png) -80px -0px no-repeat;
-      }
+.nav a {
+  color: #000;
+}
 
 
-    .nav li.icon {
-      padding: 16px 7px 18px 7px;
-      line-height: 16px;
-    }
+li.icon a {
+  background: url(img/radkeySocialIcons.png) 0 -0px no-repeat;
+}
 
-        .nav li:hover {
-    background: rgba(250,239,116,.4);
+li.icon a.twitter {
+  background: url(img/radkeySocialIcons.png) -16px -0px no-repeat;
+}
+
+li.icon a.instagram {
+  background: url(img/radkeySocialIcons.png) -32px -0px no-repeat;
+}
+
+li.icon a.facebook {
+  background: url(img/radkeySocialIcons.png) -0 -0px no-repeat;
+}
+
+li.icon a.youtube {
+  background: url(img/radkeySocialIcons.png) -64px -0px no-repeat;
+}
+
+li.icon a.soundcloud {
+  background: url(img/radkeySocialIcons.png) -80px -0px no-repeat;
+}
+
+
+.nav li.icon {
+  padding: 16px 7px 18px 7px;
+  line-height: 16px;
+}
+
+.nav li:hover {
+  background: rgba(255,255,255,.1);
   /* background: rgba(174,0,0,.9);*/
 }
 
-    li.icon a {
-        display: block;
-        width: 16px;
-        background: url(img/radkeySocialIcons.png) 0 0 no-repeat;
-        font-size: 0;
-    }
+li.icon a {
+    display: block;
+    width: 16px;
+    background: url(img/radkeySocialIcons.png) 0 0 no-repeat;
+    font-size: 0;
+}
 
-
-
-
-    #homeAbout{
-      margin-left: 8px;
-    }
+#homeAbout{
+  margin-left: 8px;
+}
