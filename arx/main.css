@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
 
 html {
-  <!-- background: #111; -->
+   /*background: #111; */
 }
 
 body{
@@ -26,9 +26,9 @@ body.lightboxed {
   width:100%;
   position:fixed;
   /*background-color: #222222;*/
-  background: rgba(0,0,0,.75);*/
+  background: rgba(0,0,0,.75);
   z-index:999;
-  display:block;
+  display: block;
   font-family:Courier;
 }
 
@@ -153,7 +153,7 @@ li.icon a {
   text-align: center;
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 
 }
 
@@ -196,7 +196,7 @@ li.icon a {
   width:100%;
   text-align: center;
   position: relative;
-  z-index: -1; 
+  z-index: 1; 
 }
 #band #bandp {
   width:100%;
