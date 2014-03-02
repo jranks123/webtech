@@ -25,10 +25,6 @@
 }
 
 
- #Blog{
-    margin-left: 8px;
- }
-
 }
 
 
@@ -69,6 +65,7 @@ body{
   width: auto;
   cursor: pointer;
   opacity: .8;
+  display: none;
 
 }
 
