@@ -1,9 +1,5 @@
-         .nav li:hover {
-        background: rgba(250,239,116,.4);
-     /* background: rgba(174,0,0,.9);*/
-    }
 
-    body{
+body{
   background:url(bgheader3.jpg) no-repeat center center fixed;
   /*background-attachment: fixed;
   background-position-x: center !important;*/
@@ -12,3 +8,22 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.nav .logo a{
+  background: url(img/logo_small_black.png) 0 0 no-repeat;
+  font-size:0;
+  display: block;
+  width:34px;
+  height:49px;
+  opacity:0.5;
+}
+
+.nav {
+  background: rgba(255,255,255,.77);
+}
+
+.nav li:hover {
+  background: rgba(250,239,116,.4);
+  /* background: rgba(174,0,0,.9);*/
+}
+
