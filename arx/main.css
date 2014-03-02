@@ -1,31 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
 
-
-@media screen and (max-width: 680px){
-
-  .nav ul li {
-    font-size: x-small;
-  }
-
-  li.icon {
-    display:none;
- }
-
-}
-
-@media screen and (min-width: 681px) and (max-width: 2000px){
-
-  .nav ul li {
-    font-size: medium;
-  }
-
-
- #Blog{
-    margin-left: 8px;
- }
-
-}
-
 html {
   <!-- background: #111; -->
 }
@@ -38,6 +12,7 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align: center;
 }
 
 body.lightboxed {
@@ -248,3 +223,86 @@ li.icon a {
 .clear {
   clear: both;
 }
+
+div #videoSection{
+  width:100%;
+  text-align: center;
+  display: inline;
+}
+
+#videoSection .embeddedVideo{
+  margin:0 auto;
+  width:30%;
+  text-align: center;
+}
+
+#video2, #video3{
+  display: none;
+}
+
+
+
+
+#video1, #video2, #video3{
+  background-color: black;
+}
+
+@media screen and (max-width: 680px){
+
+   #homeAbout{
+      margin-left: 0px;
+    }
+
+.nav ul .inPage{
+  float:none;
+  display: inline;
+}
+.nav{
+  text-align: center;
+  height: 91px;
+}
+.nav ul li {
+  font-size: small;
+}
+.nav ul{
+  margin-left: -40px;
+  clear:both;
+}
+
+
+.nav ul li.inPage a{
+ padding: 16px 5px 16px 5px;
+
+}
+
+
+
+
+.nav .logo{
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: 10px;
+  float: left;
+  position: relative;
+  opacity: 1;
+}
+
+
+ li.icon {
+    display:none;
+ }
+}
+
+@media screen and (min-width: 681px) and (max-width: 2000px){
+
+  .nav ul li {
+    font-size: medium;
+  }
+
+
+ #Blog{
+    margin-left: 8px;
+ }
+
+}
+

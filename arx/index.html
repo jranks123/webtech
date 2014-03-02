@@ -10,6 +10,8 @@
         <script src="js/vendor/modernizr.custom.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="jquery.backstretch.min.js"></script>
+        <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
+        <script src="videoStuff.js"></script>
         <style>body{background:url(<! image url here >) no-repeat;background-attachment:fixed}</style>
     </head>
 
@@ -60,6 +62,20 @@
           <div class="clear"></div>
         </div>
 
+        <div id="videoSection">
+            <div class="embeddedVideo" id="video1">
+              <iframe id="vid1" width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="embeddedVideo" id="video2">
+              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="embeddedVideo" id="video3">
+              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button id="rightButton"> Right</button>
+            <button id="leftButton"> Left</button>
+        </div>
+
         <script>
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -87,6 +103,9 @@
             duration: 4000
         });
     </script>
+
+
+
 
     </body>
 </html>
