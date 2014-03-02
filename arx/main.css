@@ -232,8 +232,9 @@ div #videoSection{
 
 #videoSection .embeddedVideo{
   margin:0 auto;
-  width:30%;
+  width:50%;
   text-align: center;
+  border:10px solid #ccc;
 }
 
 #video2, #video3{

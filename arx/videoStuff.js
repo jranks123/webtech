@@ -1,5 +1,7 @@
 $(function() {
 
+
+
 	// Find all YouTube videos
 	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
 
