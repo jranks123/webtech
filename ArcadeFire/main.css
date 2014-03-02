@@ -179,7 +179,12 @@ li.icon a {
   text-align: center;
   overflow: hidden;
   position: relative;
+<<<<<<< HEAD:main.css
   z-index: -1;
+=======
+  z-index: 0;
+
+>>>>>>> FETCH_HEAD:ArcadeFire/main.css
 
 }
 
@@ -224,6 +229,7 @@ li.icon a {
   position: relative;
   z-index: -1; 
 }
+
 #band #bandp {
   width:100%;
   max-width: 400px;
