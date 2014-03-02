@@ -27,3 +27,26 @@ body{
   /* background: rgba(174,0,0,.9);*/
 }
 
+li.icon a {
+  background: url(img/radkeySocialIcons.png) 0 -16px no-repeat;
+}
+
+li.icon a.twitter {
+  background: url(img/radkeySocialIcons.png) -16px -16px no-repeat;
+}
+
+li.icon a.instagram {
+  background: url(img/radkeySocialIcons.png) -32px -16px no-repeat;
+}
+
+li.icon a.facebook {
+  background: url(img/radkeySocialIcons.png) -0 -16px no-repeat;
+}
+
+li.icon a.youtube {
+  background: url(img/radkeySocialIcons.png) -64px -16px no-repeat;
+}
+
+li.icon a.soundcloud {
+  background: url(img/radkeySocialIcons.png) -80px -16px no-repeat;
+}
