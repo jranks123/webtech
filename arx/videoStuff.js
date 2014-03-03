@@ -11,7 +11,7 @@ $(function() {
 	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
 
 	    // The element that is fluid width
-	    $fluidEl = $("#videoSection .embeddedVideo");
+	    $fluidEl = $("#video .embeddedVideo");
 
 	// Figure out and save aspect ratio for each video
 	$allVideos.each(function() {
@@ -84,6 +84,25 @@ $(function() {
 		document.getElementById(vidName).src=newSrc;
 	}
 
+
+	function getScreen( url, size )
+	{
+  		if(url === null){ return ""; }
+
+  		size = (size === null) ? "big" : size;
+		var vid;
+		var results;
+
+		results = url.match("[\\?&]v=([^&#]*)");
+
+		vid = ( results === null ) ? url : results[1];
+
+		if(size == "small"){
+		return "http://img.youtube.com/vi/"+vid+"/2.jpg";
+		}else {
+		return "http://img.youtube.com/vi/"+vid+"/0.jpg";
+		}
+	}
 
 
 });
