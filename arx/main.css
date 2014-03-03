@@ -1,43 +1,27 @@
+/*load opensource font from google */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
 
-
-@media screen and (max-width: 680px){
-
-  .nav ul li {
-    font-size: x-small;
-  }
-
-  li.icon {
-    display:none;
- }
-
-}
-
-@media screen and (min-width: 681px) and (max-width: 2000px){
-
-  .nav ul li {
-    font-size: medium;
-  }
-
-
- #Blog{
-    margin-left: 8px;
- }
-
-}
-
 html {
-  <!-- background: #111; -->
+  /*background: #111; */
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
+/*make background 'cover style' for various OS*/
 body{
   /*background:url(bgheader1.jpg) no-repeat center center fixed;
-  /*background-attachment: fixed;
+  background-attachment: fixed;
   background-position-x: center !important;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body.lightboxed {
@@ -45,27 +29,49 @@ body.lightboxed {
   overflow: hidden;
 }
 
+/*invisible div to place above navigation bar for auto-scroll*/
+div #home {
+}
+
+.home {
+  height:100%;
+  background: url('bgheader1.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* navbar properties */
 .nav {
-  top:0px;
+  /*top:0px;*/
   left:0px;
   height: 50px;
   width:100%;
-  position:fixed;
+  margin-top: -50px;
+  /*position:fixed;*/
+  position: absolute;
   /*background-color: #222222;*/
   background: rgba(0,0,0,.75);
   z-index:999;
   display:block;
   font-family:Courier;
+  border-bottom: 1px #ddd solid;}
+
+  .navbar-fixed {
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    margin-top: 0px;
 }
 
 .nav .logo{
   position: absolute;
   margin-left: 10px;
-  margin-right:10px;
+  margin-right: 10px;
   width: auto;
   cursor: pointer;
   opacity: .8;
-
 }
 
 .nav .logo a{
@@ -77,11 +83,9 @@ body.lightboxed {
   opacity:0.7;
 }
 
-
 .nav .logo a:hover{
   opacity:1;
 }
-
 
 .nav ul .inPage{
   float:left;
@@ -146,11 +150,6 @@ li.icon a.soundcloud {
   background: url(img/radkeySocialIcons.png) -80px -0px no-repeat;
 }
 
-#homepage{
-    height: 600px;
-}
-
-
 .nav li.icon {
   padding: 16px 7px 18px 7px;
   line-height: 16px;
@@ -172,16 +171,26 @@ li.icon a {
   margin-left: 8px;
 }
 
+#homepage{
+    height: 200px;
+}
 
-#homepage {
+.homepage{
+   /* width:100%;
+    height:100%;
+    background: #fff url(bgheader1.jpg) no-repeat fixed 0 0; 
+    overflow:auto;*/
+}
+
+/*#homepage {
   width: 100%;
   height: 730px;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   z-index: -1;
 
-}
+}*/
 
 #homepage h1 {
   margin: 0px;
@@ -220,9 +229,11 @@ li.icon a {
 #band {
   background: #fff;
   width:100%;
+  height:1000px;
   text-align: center;
   position: relative;
   z-index: -1; 
+  font-family: Arial, sans-serif;
 }
 #band #bandp {
   width:100%;
@@ -243,4 +254,71 @@ li.icon a {
 
 .clear {
   clear: both;
+}
+
+@media screen and (max-width: 680px){
+
+   #homeAbout{
+      margin-left: 0px;
+    }
+
+.nav ul .inPage{
+  float:none;
+  display: inline;
+}
+.nav{
+  text-align: center;
+  height: 91px;
+  margin-top: -90px;
+}
+
+.navbar-fixed {
+  top: 0;
+  z-index: 999;
+  position: fixed;
+  margin-top: 0px;
+}
+
+.nav ul li {
+  font-size: small;
+}
+.nav ul{
+  margin-left: -40px;
+  clear:both;
+}
+
+
+.nav ul li.inPage a{
+ padding: 16px 5px 16px 5px;
+
+}
+
+
+
+.nav .logo{
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: 10px;
+  float: left;
+  position: relative;
+  opacity: 1;
+}
+
+
+ li.icon {
+    display:none;
+ }
+}
+
+@media screen and (min-width: 681px) and (max-width: 2000px){
+
+  .nav ul li {
+    font-size: medium;
+  }
+
+
+ #Blog{
+    margin-left: 8px;
+ }
+
 }

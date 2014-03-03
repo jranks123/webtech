@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="main.css">
-        <!--<link rel="stylesheet" href="theme.css"> -->
+        <link rel="stylesheet" href="theme.css"> 
         <script src="js/vendor/modernizr.custom.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="jquery.backstretch.min.js"></script>
@@ -21,8 +21,9 @@
 
         <!-- start navigation bar, above all page content -->
         <div class="nav" id="nav">
-        <div class="logo" id="logo"><a href="#home" title="Home">Home</a></div> 
+      <!--  <div class="logo" id="logo"><a href="#home" title="Home">Home</a></div> -->
           <ul>
+            <li class="inPage" id="logo2"><img src="img/logo_small_black.png"></img></li>
             <li class="inPage Hide" id="homeAbout"><a href="#band" title="Band">About</a></li>
             <li class="inPage Hide"><a href="#homeAudio" title="Audio">Music</a></li>
             <li class="inPage Hide"><a href="#homeVideo" title="Video">Video</a></li>
@@ -39,9 +40,10 @@
         </div>
         <!-- end of navigation bar -->
 
-        <!-- marker div for the scroll bar -->
-        <div class="marker"></div>
-        <!-- ends marker -->
+        <!-- homepage section, front of site with AF image background 
+        <div class="homepage" id="homepage">
+        </div>
+        end of homepage splash area -->
 
         <!-- start of 'about the band' section -->
         <div id="band">
@@ -54,6 +56,7 @@
            <p>Band text here.</p>
            <p>Band text here.</p>
            <p>Band text here.</p>
+
           <div class="clear"></div>
         </div>
         <!-- end of 'about the band' -->
@@ -78,39 +81,18 @@
         <!-- end of smooth scrolling -->
 
         <!-- js for nav bar pin -->
-        <script>
+        <script type="text/javascript">
             $(document).ready(function() {
-
                 $(window).scroll(function () {
-                    var scrollTop     = $(window).scrollTop(),
-                    elementOffset     = $('.marker').offset().top,
-                    distance          = (elementOffset - scrollTop);
-                    //secondaryOffset   = $('.band').offset().top;
-                    //secondaryDistance = (secondaryOffset - scrollTop);
-                    
-                    //fix the navbar at the top unless you're on the starting 'splash'
-                    if ($(window).width() > 680) {
-                        if (distance < 50) {
-                            $('#nav').addClass('navbar-fixed');
-                            $('#logo').addClass('logo-fixed');
-                         }
-                        if (distance > 51) {
-                            $('#nav').removeClass('navbar-fixed');
-                            $('#logo').removeClass('logo-fixed');                    
-                        }
+                console.log($(window).scrollTop())
+                    if ($(window).scrollTop() > 700) {
+                    $('#nav').addClass('navbar-fixed');
+                    $('#logo').addClass('logo-fixed');
+                }
+                    if ($(window).scrollTop() < 701) {
+                    $('#nav').removeClass('navbar-fixed');
+                    $('#logo').removeClass('logo-fixed');                    
                     }
-                    //amended for mobile devices alternate navigation size
-                    if ($(window).width() < 681) {
-                        if (distance < 90) {
-                            $('#nav').addClass('navbar-fixed');
-                            $('#logo').addClass('logo-fixed');
-                         }
-                        if (distance > 91) {
-                            $('#nav').removeClass('navbar-fixed');
-                            $('#logo').removeClass('logo-fixed');                    
-                        }
-                    }
-
             });
             });
         </script>
@@ -126,5 +108,7 @@
              home.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
             }
         </script>
+
+
     </body>
 </html>
