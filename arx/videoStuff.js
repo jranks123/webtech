@@ -1,6 +1,11 @@
 $(function() {
 
-
+	$('#main').on('load', function(){
+	
+		$('#video1').hide();
+		$('#video2').hide();
+	});
+	
 
 	// Find all YouTube videos
 	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
@@ -39,7 +44,7 @@ $(function() {
 	// Kick off one resize to fix all videos on page load
 	}).resize();
 
-	$('#rightButton').on('click', function() {
+	$('.rightButton').on('click', function() {
 
 		if ($('#video1').is(':visible')){
 			hideVid('#video1', 'vid1', ' ');
@@ -53,7 +58,7 @@ $(function() {
 		}
 	});
 
-	$('#leftButton').on('click', function() {
+	$('.leftButton').on('click', function() {
 
 		if ($('#video1').is(':visible')){
 			hideVid('#video1', 'vid1', ' ');

@@ -230,21 +230,26 @@ div #videoSection{
   display: inline;
 }
 
-#videoSection .embeddedVideo{
+.embeddedVideo{
   margin:0 auto;
   width:50%;
   text-align: center;
-  border:10px solid #ccc;
+  display: inline;
+  vertical-align: middle;
 }
 
 #video2, #video3{
   display: none;
 }
 
+#vid1, #vid2, #vid3{
+    border:10px solid #ccc;
+      vertical-align: middle;
+}
 
 
 
-#video1, #video2, #video3{
+#vid1, #vid2, #vid3{
   background-color: black;
 }
 
