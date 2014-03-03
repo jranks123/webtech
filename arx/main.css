@@ -230,11 +230,12 @@ div #videoSection{
   display: inline;
 }
 
+
 .embeddedVideo{
   margin:0 auto;
   width:50%;
   text-align: center;
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -245,10 +246,20 @@ div #videoSection{
 }
 
 #vid1, #vid2, #vid3{
-    border:10px solid #ccc;
-      vertical-align: middle;
+  border:10px solid #ccc;
+  vertical-align: middle;
+  margin:0 auto;
+  width:10%;
+  text-align: center;
+  display: inline;
+  vertical-align: middle;
 }
 
+
+#youtube{
+  display: inline;
+  background-color: green;
+}
 
 
 #vid1, #vid2, #vid3{
