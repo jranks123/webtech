@@ -11,6 +11,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="jquery.backstretch.min.js"></script>
         <!--<style>body{background:url(<! image url here >) no-repeat;background-attachment:fixed}</style>-->
+        <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
+        <script src="videoStuff.js"></script>
     </head>
 
 
@@ -24,11 +26,11 @@
         <div class="logo" id="logo"><a href="#home" title="Home">Home</a></div> 
           <ul>
             <li class="inPage Hide" id="homeAbout"><a href="#band" title="Band">About</a></li>
-            <li class="inPage Hide"><a href="#homeAudio" title="Audio">Music</a></li>
-            <li class="inPage Hide"><a href="#homeVideo" title="Video">Video</a></li>
-            <li class="inPage Hide"><a href="#homeLive" title="Live">Live</a></li>
-            <li class="inPage Blog" id="Blog"><a href="#Blog" title="Blog">Blog</a></li>
-            <li class="inPage Shop"><a href="#Shop" title="Shop">Shop</a></li>
+            <li class="inPage Hide"><a href="#audio" title="Audio">Music</a></li>
+            <li class="inPage Hide"><a href="#video" title="Video">Video</a></li>
+            <li class="inPage Hide"><a href="#live" title="Live">Live</a></li>
+            <li class="inPage Blog" id="Blog"><a href="#blog" title="Blog">Blog</a></li>
+            <li class="inPage Shop"><a href="#shop" title="Shop">Shop</a></li>
             <li class="icon"><a class="soundcloud" href="https://soundcloud.com/arcadefire" title="SoundCloud" target="_blank">SoundCloud</a></li>
             <li class="icon"><a class="youtube" href="http://www.youtube.com/arcadefire" title="YouTube" target="_blank">YouTube</a></li>
             <li class="icon"><a class="instagram" href="http://instagram.com/arcadefire" title="Instagram" target="_blank">Instagram</a></li>
@@ -57,6 +59,29 @@
           <div class="clear"></div>
         </div>
         <!-- end of 'about the band' -->
+
+        <!-- start video section -->
+        <div class="video" id="video">
+          <div class="wrap">
+            <div class="embeddedVideo" id="video1">
+              <iframe id="vid1" width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="embeddedVideo" id="video2">
+              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="embeddedVideo" id="video3">
+              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+         </div>
+         <div class="vidButtons"> 
+            <ul>
+                <li><a href="#leftB" title="leftB" class="leftButton"><img src="vid_left.png" alt="move to previous video"/></a></li>            
+                <li><a href="#rightB" title="rightB" class="rightButton"><img src="vid_right.png" alt="move to next video" /></a></li>
+            </ul>
+        </div>
+        </div>
+        <!-- end video section -->
+
 
         <!--js for smooth scrolling-->
         <script>
@@ -116,6 +141,7 @@
         </script>
         <!-- end nav bar pinning code -->
 
+        <!-- parallax header -->
         <script>
             var home = document.getElementById("home");
             var speed = 1.5;
@@ -126,5 +152,6 @@
              home.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
             }
         </script>
+        <!-- end parallax header js -->
     </body>
 </html>

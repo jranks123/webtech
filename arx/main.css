@@ -63,6 +63,7 @@ div #home {
     z-index: 999;
     position: fixed;
     margin-top: 0px;
+    background: rgba(0,0,0,.85);
 }
 
 .nav .logo{
@@ -252,6 +253,42 @@ li.icon a {
   line-height: 28px;
 }
 
+
+.video{
+  width:100%;
+  text-align: center;
+  display: inline;
+}
+
+
+.embeddedVideo{
+  margin:0 auto;
+  width:50%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vidButtons{
+  padding: 10px 0 10px 0;
+}
+
+.vidButtons li {
+  padding: 0 10px 0 10px;
+  display:inline;
+}
+
+#video2, #video3{
+  display: none;
+}
+
+
+#vid1, #vid2, #vid3{
+  background-color: black;
+  border:10px solid #ccc;
+}
+
+
 .clear {
   clear: both;
 }
@@ -277,6 +314,7 @@ li.icon a {
   z-index: 999;
   position: fixed;
   margin-top: 0px;
+  background: rgba(0,0,0,.85);
 }
 
 .nav ul li {
