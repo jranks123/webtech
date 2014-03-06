@@ -10,15 +10,24 @@
         <script src="js/vendor/modernizr.custom.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="jquery.backstretch.min.js"></script>
+        <script src="raphael-min.js"></script>
         <!--<style>body{background:url(<! image url here >) no-repeat;background-attachment:fixed}</style>-->
-        <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
         <script src="videoStuff.js"></script>
+
+
     </head>
 
 
     <body id="main">
         <!-- splash image/top of site -->
-        <div class="home" id="home"></div>
+        <div class="home" id="home"> 
+       <!-- <embed class="emb" src="img/logo_black.svg" width="100" height="100" type="image/svg+xml" />-->
+       <!-- <iframe class="emb" src="img/logo_black.svg" width="100" height="100" style="border:0" ></iframe>-->
+
+               <object id="logosvg" class="emb images" data="img/logo_black.svg" type="image/svg+xml"> </object> 
+              <div class="logoMarker"></div>
+
+        </div>
         <!-- end splash area -->
 
         <!-- start navigation bar, above all page content -->
@@ -63,24 +72,27 @@
         <!-- start video section -->
         <div class="video" id="video">
           <div class="wrap">
-            <div class="embeddedVideo" id="video1">
-              <iframe id="vid1" width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </div>
+           <!-- <div class="embeddedVideo" id="video1">
+              <iframe id="vid1" class='"vid1' width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+            </div>-->
+            <div id="player"></div>
             <div class="embeddedVideo" id="video2">
-              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="embeddedVideo" id="video3">
-              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
             </div>
          </div>
          <div class="vidButtons"> 
             <ul>
-                <li><a href="#leftB" title="leftB" class="leftButton"><img src="vid_left.png" alt="move to previous video"/></a></li>            
-                <li><a href="#rightB" title="rightB" class="rightButton"><img src="vid_right.png" alt="move to next video" /></a></li>
+                <li id="lb"><a href="#leftB" title="leftB" class="leftButton"><img src="vid_left.png" alt="move to previous video"/></a></li>            
+                <li id="rb"><a href="#rightB" title="rightB" class="rightButton"><img src="vid_right.png" alt="move to next video" /></a></li>
             </ul>
         </div>
         </div>
+                <script src="video2.js"></script>
         <!-- end video section -->
+
 
 
         <!--js for smooth scrolling-->
@@ -108,11 +120,18 @@
 
                 $(window).scroll(function () {
                     var scrollTop     = $(window).scrollTop(),
+                    windowHeight      = $(window).height(),
                     elementOffset     = $('.marker').offset().top,
-                    distance          = (elementOffset - scrollTop);
+                    logoElementOffset = $('.logoMarker').offset().top,
+                    distance          = (elementOffset - scrollTop),
+                    logoDistance      = (logoElementOffset - scrollTop),
+                    proportion        = distance/windowHeight;
+
+
+
                     //secondaryOffset   = $('.band').offset().top;
                     //secondaryDistance = (secondaryOffset - scrollTop);
-                    
+
                     //fix the navbar at the top unless you're on the starting 'splash'
                     if ($(window).width() > 680) {
                         if (distance < 50) {
@@ -123,7 +142,11 @@
                             $('#nav').removeClass('navbar-fixed');
                             $('#logo').removeClass('logo-fixed');                    
                         }
-                    }
+                       // console.log(proportion);
+
+                      }
+
+                    
                     //amended for mobile devices alternate navigation size
                     if ($(window).width() < 681) {
                         if (distance < 90) {
@@ -135,6 +158,16 @@
                             $('#logo').removeClass('logo-fixed');                    
                         }
                     }
+
+                   for(i = 0; i < 1; i = i + 0.1){
+                        if (proportion < i) {
+                            $('#logosvg').addClass('newlogo' + Math.round( (i * 10)+2 ));
+                         }
+
+                        if (proportion > i) {
+                            $('#logosvg').removeClass('newlogo'+ Math.round( (i * 10)+2 ));                   
+                        }
+                  }
 
             });
             });
@@ -153,5 +186,11 @@
             }
         </script>
         <!-- end parallax header js -->
+
+
+       
+
+
+
     </body>
 </html>

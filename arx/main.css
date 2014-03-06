@@ -33,6 +33,73 @@ body.lightboxed {
 div #home {
 }
 
+
+
+#logosvg{
+  height:60%;
+  margin-top: 8%;
+  fill:black;
+}
+
+/*path{
+  fill:green;
+}*/
+
+.newlogo12{
+   opacity: 0.89;
+}
+
+
+.newlogo11{
+   opacity: 0.79;
+}
+
+.newlogo10{
+   opacity: 0.67;
+}
+
+.newlogo9{
+   opacity: 0.56;
+}
+
+.newlogo8{
+   opacity: 0.44;
+}
+
+.newlogo7{
+   opacity: 0.32;
+}
+
+.newlogo6{
+   opacity: 0.2;
+}
+
+.newlogo5{
+   opacity: 0.08;
+}
+
+.newlogo4{
+   opacity: 0.02;
+}
+
+.newlogo3{
+   opacity: 0.0;
+}
+
+
+
+
+
+/*#logosvg:hover{
+  -webkit-transform:scale(1.1,1.1);
+  transform:scale(1.1,1.1);
+}*/
+
+
+
+
+
+
 .home {
   height:100%;
   background: url('bgheader1.jpg') no-repeat;
@@ -40,6 +107,7 @@ div #home {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align: center;
 }
 
 /* navbar properties */
@@ -192,7 +260,7 @@ li.icon a {
   z-index: -1;
 
 }*/
-
+ 
 #homepage h1 {
   margin: 0px;
   color: #db0000;
@@ -360,3 +428,6 @@ li.icon a {
  }
 
 }
+
+
+

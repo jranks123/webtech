@@ -62,26 +62,69 @@ $(function() {
 
 		if ($('#video1').is(':visible')){
 			hideVid('#video1', 'vid1', ' ');
-			showVid('#video3', 'vid3', 'http://www.youtube.com/embed/EcKinnMXuKg?controls=0&showinfo=0');
+			showVid('#video3', 'vid3', 'http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0');
 		}else if ($('#video2').is(':visible')){
 			hideVid('#video2', 'vid2', ' ');
-			showVid('#video1', 'vid1', 'http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0');
+			showVid('#video1', 'vid1', 'http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0');
 		}else if ($('#video3').is(':visible')){
 			hideVid('#video3', 'vid3', ' ');
-			showVid('#video2', 'vid2', 'http://www.youtube.com/embed/T4JrQpzno5Y?controls=0&showinfo=0');
+			showVid('#video2', 'vid2', 'http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0');
 		}
 	});
 
 
+	// https://developers.google.com/youtube/iframe_api_reference
+
+/*	// global variable for the player
+	var player;
+
+	// this function gets called when API is ready to use
+	function onYouTubePlayerAPIReady() {
+	  // create the global player from the specific iframe (#video)
+	  	player = new YT.Player('vid1', {
+	    events: {
+
+	      // call this function when player is ready to use
+	      'onReady': onPlayerReady
+	    }
+	  });
+	}
+
+	function onPlayerReady(event) {
+	  	  console.log("hi");
+
+	  // bind events
+	  var playButton = document.getElementById("lb");
+	  console.log(playButton.id);
+	  console.log("hi");
+
+	  playButton.addEventListener("click", function() {
+	    player.playVideo();
+	  });
+	  
+	  var pauseButton = document.getElementById("rb");
+	  pauseButton.addEventListener("click", function() {
+	    player.pauseVideo();
+	  });
+	  
+	}
+
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	console.log( firstScriptTag);
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+*/
 
 	function hideVid(videoName, vidName, newSrc){
-		document.getElementById(vidName).src=newSrc;
+		//document.getElementById(vidName).src=newSrc;
 		$(videoName).hide();
 	}
 
 	function showVid(videoName, vidName, newSrc){
 		$(videoName).show();
-		document.getElementById(vidName).src=newSrc;
+		//document.getElementById(vidName).src=newSrc;
 	}
 
 
