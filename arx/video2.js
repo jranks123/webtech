@@ -7,12 +7,25 @@
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-      var player;
+      var player1, player2, player3;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
+
+
+        player1 = new YT.Player('vid1', {
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+
+        player2 = new YT.Player('vid2', {
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+
+        player3 = new YT.Player('vid3', {
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -22,7 +35,7 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        event.target.playVideo();
+
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -37,8 +50,20 @@
       }
 
           var pauseButton = document.getElementById("rb");
+
+          var pauseButton2 = document.getElementById("lb");
     pauseButton.addEventListener("click", function() {
-      player.pauseVideo();
+      player1.pauseVideo();
+      player2.pauseVideo();
+      player3.pauseVideo();
+
+    });
+
+    pauseButton2.addEventListener("click", function() {
+      player1.pauseVideo();
+      player2.pauseVideo();
+      player3.pauseVideo();
+
     });
     
       function stopVideo() {
