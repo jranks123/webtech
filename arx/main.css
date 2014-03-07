@@ -24,6 +24,7 @@ body{
   margin: 0;
 }
 
+
 body.lightboxed {
   height: 100%;
   overflow: hidden;
@@ -361,6 +362,11 @@ li.icon a {
   clear: both;
 }
 
+.subpage{
+
+  width:100%;
+  text-align: center;
+}
 @media screen and (max-width: 680px){
 
    #homeAbout{
