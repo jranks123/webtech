@@ -261,6 +261,23 @@ li.icon a {
   z-index: -1;
 
 }*/
+
+#albumart{
+  margin-top: 100px;
+  font-family: Courier, Arial, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.text{
+  width:50%;
+  font-family: Arial;
+  border: 2px solid black;
+  margin: auto;
+
+}
+
+
  
 #homepage h1 {
   margin: 0px;
@@ -332,6 +349,7 @@ li.icon a {
 
 .embeddedVideo{
   margin:0 auto;
+
   width:50%;
   text-align: center;
   display: inline-block;
@@ -367,6 +385,8 @@ li.icon a {
   width:100%;
   text-align: center;
 }
+
+
 @media screen and (max-width: 680px){
 
    #homeAbout{
@@ -420,6 +440,11 @@ li.icon a {
  li.icon {
     display:none;
  }
+
+ .embeddedVideo{
+  width:80%;
+
+}
 }
 
 @media screen and (min-width: 681px) and (max-width: 2000px){
@@ -432,6 +457,8 @@ li.icon a {
  #Blog{
     margin-left: 8px;
  }
+
+
 
 }
 

@@ -23,67 +23,62 @@
                 // Replace image with new SVG
                 $img.replaceWith($svg);
 
-        var fillcolor = 'fill:blue';
+        var fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+        console.log(fillColor);
 
         var p1 =  document.getElementById('int1');
-        console.log(p1);
         p1.addEventListener("click", function() {
-        console.log("click1");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int1');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
         });
 
          var p2 =  document.getElementById('int2');
-        console.log(p2);
         p2.addEventListener("click", function() {
-        console.log("click2");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int2');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
         });
 
          var p3 =  document.getElementById('int3');
-        console.log(p3);
         p3.addEventListener("click", function() {
-        console.log("click3");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int3');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
         });
          var p4 =  document.getElementById('int4');
-        console.log(p4);
         p4.addEventListener("click", function() {
-        console.log("click4");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int4');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
         });
          var p5 =  document.getElementById('int5');
-        console.log(p5);
         p5.addEventListener("click", function() {
-        console.log("click5");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int5');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
         });
 
          var p6 =  document.getElementById('int6');
-        console.log(p6);
         p6.addEventListener("click", function() {
-        console.log("click6");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int6');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
@@ -92,22 +87,31 @@
 
 
         var p7 =  document.getElementById('int7');
-        console.log(p7);
         p7.addEventListener("click", function() {
-        console.log("click7");
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int7');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
 
 
 
+        });
+
+        
+       var p9 =  document.getElementById('int9');
+        p9.addEventListener("click", function() {
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+                var svgElem = document.getElementById('int9');
+                svgElem.setAttribute("style", fillColor);
         });
 
 
         var p8 =  document.getElementById('int8');
         p8.addEventListener("click", function() {
+        fillColor = 'fill:#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
                 var svgElem = document.getElementById('int8');
-                svgElem.setAttribute("style", fillcolor);
+                svgElem.setAttribute("style", fillColor);
         });
+
 
 
 
