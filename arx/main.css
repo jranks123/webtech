@@ -34,6 +34,14 @@ body.lightboxed {
 div #home {
 }
 
+.video .afterthumb a{
+  background: url(afterlife.png) 0 0 no-repeat;
+  font-size:0;
+  display: block;
+  width:200px;
+  height:200px;
+  opacity:0.7;
+}
 
 
 #logosvg{
@@ -220,6 +228,12 @@ li.icon a.soundcloud {
   background: url(img/radkeySocialIcons.png) -80px -0px no-repeat;
 }
 
+
+
+li #after{
+  height:30%;
+}
+
 .nav li.icon {
   padding: 16px 7px 18px 7px;
   line-height: 16px;
@@ -278,7 +292,6 @@ li.icon a {
 }
 
 
- 
 #homepage h1 {
   margin: 0px;
   color: #db0000;

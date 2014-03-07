@@ -45,6 +45,9 @@ $(function() {
 	}).resize();
 
 	$('.rightButton').on('click', function() {
+		$('#box').animate({ 
+        right: "-=30%",
+      }, 'slow' );
 
 		if ($('#video1').is(':visible')){
 			hideVid('#video1', 'vid1', ' ');
@@ -59,7 +62,9 @@ $(function() {
 	});
 
 	$('.leftButton').on('click', function() {
-
+		$('#box').animate({ 
+        right: "+=30%",
+      }, 'slow' );
 		if ($('#video1').is(':visible')){
 			hideVid('#video1', 'vid1', ' ');
 			showVid('#video3', 'vid3', 'http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0');
@@ -73,49 +78,6 @@ $(function() {
 	});
 
 
-	// https://developers.google.com/youtube/iframe_api_reference
-
-/*	// global variable for the player
-	var player;
-
-	// this function gets called when API is ready to use
-	function onYouTubePlayerAPIReady() {
-	  // create the global player from the specific iframe (#video)
-	  	player = new YT.Player('vid1', {
-	    events: {
-
-	      // call this function when player is ready to use
-	      'onReady': onPlayerReady
-	    }
-	  });
-	}
-
-	function onPlayerReady(event) {
-	  	  console.log("hi");
-
-	  // bind events
-	  var playButton = document.getElementById("lb");
-	  console.log(playButton.id);
-	  console.log("hi");
-
-	  playButton.addEventListener("click", function() {
-	    player.playVideo();
-	  });
-	  
-	  var pauseButton = document.getElementById("rb");
-	  pauseButton.addEventListener("click", function() {
-	    player.pauseVideo();
-	  });
-	  
-	}
-
-	var tag = document.createElement('script');
-	tag.src = "https://www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	console.log( firstScriptTag);
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-*/
 
 	function hideVid(videoName, vidName, newSrc){
 		//document.getElementById(vidName).src=newSrc;
