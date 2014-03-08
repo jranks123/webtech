@@ -1,3 +1,26 @@
+/*------------------------------------------------------- GENERAL */
+
+@font-face {
+  font-family: 'CourierRegular';
+  src: url('http://arcadefire.com/reflektorpreorder/assets/font/cour-webfont.eot');
+  src: url('http://arcadefire.com/reflektorpreorder/assets/font/cour-webfont.eot?#iefix') format('embedded-opentype'),
+     url('http://arcadefire.com/reflektorpreorder/assets/font/cour-webfont.woff') format('woff'),
+     url('http://arcadefire.com/reflektorpreorder/assets/font/cour-webfont.ttf') format('truetype'),
+     url('http://arcadefire.com/reflektorpreorder/assets/font/cour-webfont.svg#CourierRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'CourierBold';
+    src: url('http://arcadefire.com/reflektorpreorder/assets/font/courier-bold-webfont.eot');
+    src: url('http://arcadefire.com/reflektorpreorder/assets/font/courier-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://arcadefire.com/reflektorpreorder/assets/font/courier-bold-webfont.woff') format('woff'),
+         url('http://arcadefire.com/reflektorpreorder/assets/font/courier-bold-webfont.ttf') format('truetype'),
+         url('http://arcadefire.com/reflektorpreorder/assets/font/courier-bold-webfont.svg#CourierBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
   /*background: #111; */
   width: 100%;
@@ -19,6 +42,8 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: 'CourierRegular', "Courier New", Courier, monospace !important;
+}
 }
 
 body.lightboxed {
@@ -190,6 +215,7 @@ li.icon a {
 }
 
 .sectionContent {
+  padding: 10px 0 0 0;
   text-align: center;
 }
 
@@ -199,7 +225,7 @@ li.icon a {
 #band {
   background: #fff;
   width:100%;
-  height:1000px;
+
   text-align: center;
   position: relative;
   z-index: 1; 
@@ -237,15 +263,16 @@ li.icon a {
 }
 
 .albums{
+  width: 100%;
   position:relative;
   z-index: 3;
   text-align: center;
   margin: 0 auto;
-
+  height: 250px;
 }
 
 .albums img {
-  border:10px solid #fff;
+  /*border:10px solid #fff;*/
 }
 
 .albumartwork{
@@ -254,13 +281,111 @@ li.icon a {
   z-index: 3;
 }
 
+.album {
+    display:inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff 
+}
+.album .details, .album .content {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.album img {
+    display: block;
+    position: relative;
+    width:200px;
+}
+.album h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font: normal 400 17px Courier;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.album p {
+    font: normal 400 12px 'carolineregular', "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+    position: relative;
+    color: #000;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.album a.info {
+    font: normal 400 14px Courier;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: lowercase;
+
+}
+.album a.info:hover {
+    color: #bbb;
+}
+
+.album img { 
+    transition: all 0.2s linear;
+}
+.album .details {
+    opacity: 0;
+    background-color: rgba(255,255,255, 0.7); 
+    transition: all 0.4s ease-in-out;
+}
+.album h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.album p { 
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.album a.info{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.album:hover img { 
+    transform: scale(1.1);
+} 
+.album:hover .details { 
+    opacity: 1;
+}
+.album:hover h2,
+.album:hover p,
+.album:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.album:hover p {
+    transition-delay: 0.1s;
+}
+.album:hover a.info {
+    transition-delay: 0.2s;
+}
+
 
 .drawer {
   position:relative;
-  -webkit-transform: translate3d(-2000px,0 , 0);
-  -moz-transform: translate3d(-2000px, 0, 0);
-  -o-transform: translate3d(-2000px, 0, 0);
-  transform: translate3d(-2000px, 0, 0);
+  -webkit-transform: translate3d(-1000px,0 , 0);
+  -moz-transform: translate3d(-1000px, 0, 0);
+  -o-transform: translate3d(-1000px, 0, 0);
+  transform: translate3d(-1000px, 0, 0);
   -webkit-transition:-webkit-transform 0.25s linear;
   -moz-transition:-moz-transform 0.25s linear;
   -o-transition:-o-transform 0.25s linear;
@@ -291,7 +416,7 @@ a.dropdown{
 .spotify {
   position: relative;
   padding-bottom: 0;
-  height: 400px;
+  height: 250px;
   width: 20%;
   float: left;
   margin: 0 3% 6% 3%;
@@ -371,8 +496,15 @@ article.post-9 .entry table td {
 }
 
 #bit-widget-0, #bit-widget-0 a, .bit-widget-container {
+  font-family: 'CourierRegular', "Courier New", Courier, monospace !important;
   font-size: 17px !important;
   line-height: 24px !important;
+
+}
+
+#bit-widget-0 #bit-events tbody tr td.bit-venue a, #bit-widget-0 a {
+  font-weight: normal !important;
+  font-family: 'CourierBold', "Courier New", Courier, monospace !important;
 }
 
 tr.bit-header, tr.bit-bottom, td.bit-rsvp, #bit-widget-0 th, td.bit-description-links {
@@ -416,6 +548,33 @@ article.post-9 a.bit-buy-tix:hover {
 tr#bit-event-7132928 td.bit-date a:after {
   content:" - May 31";
 }
+
+
+/* ------------------------------------------------------- FOOTER */
+
+#footer{
+  background: #232323;
+}
+
+#socialfooter {
+  color: #fff;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+  margin: 25px 0 50px;
+}
+
+#socialfooter a img {
+  margin: 0 2px;
+}
+
+#footercredit {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #FFF;
+}
+
 
 
 /* ------------------------------------------------------- SIZE CHANGE */
