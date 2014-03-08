@@ -11,7 +11,8 @@ html {
 
 #box{
   opacity:0.8;
-  right:191px;
+  right:340px;
+  top:5px;
 }
 
 
@@ -379,13 +380,22 @@ li.icon a {
 }
 
 .vidButtons{
+
   padding: 10px 0 10px 0;
+  text-align: center;
+
 }
+
+.vidButtons ul{
+
+}
+
 
 .vidButtons li {
   padding: 0 10px 0 10px;
   display:inline;
 }
+
 
 #video2, #video3{
   display: none;
@@ -440,6 +450,8 @@ li.icon a {
   margin-left: -40px;
   clear:both;
 }
+
+
 
 
 .nav ul li.inPage a{
