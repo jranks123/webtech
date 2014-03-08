@@ -260,14 +260,14 @@ li.icon a {
   -o-background-size: cover;
   background-size: cover;
   z-index: 1;
+  margin: auto;
 }
 
 .albums{
   width: 100%;
   position:relative;
-  z-index: 3;
   text-align: center;
-  margin: 0 auto;
+
   height: 250px;
 }
 
@@ -381,7 +381,6 @@ li.icon a {
 
 
 .drawer {
-  position:relative;
   -webkit-transform: translate3d(-1000px,0 , 0);
   -moz-transform: translate3d(-1000px, 0, 0);
   -o-transform: translate3d(-1000px, 0, 0);
@@ -391,6 +390,7 @@ li.icon a {
   -o-transition:-o-transform 0.25s linear;
   transition:transform 0.25s linear;
   z-index: 0;
+  height: 100px;
 }
 
 .drawer.active {
@@ -418,7 +418,6 @@ a.dropdown{
   padding-bottom: 0;
   height: 250px;
   width: 20%;
-  float: left;
   margin: 0 3% 6% 3%;
 }
 

@@ -17,6 +17,29 @@
 
 
     <body id="main">
+
+        <script>
+          $(document).ready(function(){
+            var min = 0;
+            var max = 4;
+            // and the formula is:
+            var random = Math.floor(Math.random() * (max - min + 1)) + min;
+            if(random = 1){
+                $("head").append("<link rel='stylesheet' href='theme.css'>");
+            }
+            if(random = 2){
+                $("head").append("<link rel='stylesheet' href='theme.css'>");
+            }
+            if(random = 3){
+                $("head").append("<link rel='stylesheet' href='theme.css'>");
+            }
+            if(random = 4){
+                $("head").append("<link rel='stylesheet' href='theme.css'>");
+            }
+        });
+        </script>
+
+
         <!-- splash image/top of site -->
         <div class="container" id="home"></div>
         <!-- end splash area -->
@@ -319,9 +342,5 @@
                 }
             })());
           </script>
-
-
-
-
     </body>
 </html>
