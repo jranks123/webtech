@@ -263,12 +263,13 @@ li.icon a {
 }
 
 .albums{
-  width: 100%;
+  width: 10%;
   position:relative;
   z-index: 3;
   text-align: center;
   margin: 0 auto;
   height: 250px;
+  display: inline-block;
 }
 
 .albums img {
@@ -283,19 +284,14 @@ li.icon a {
 
 .album {
     display:inline-block;
-    width: 200px;
-    height: 200px;
     margin: 10px;
-    border: 10px solid #fff;
-    overflow: hidden;
     position: relative;
     text-align: center;
     cursor: default;
     background: #fff 
 }
 .album .details, .album .content {
-    width: 200px;
-    height: 200px;
+
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -304,7 +300,8 @@ li.icon a {
 .album img {
     display: block;
     position: relative;
-    width:200px;
+    width:100%;
+    height: 100%;
 }
 .album h2 {
     text-transform: uppercase;
