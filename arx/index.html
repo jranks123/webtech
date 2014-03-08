@@ -108,7 +108,7 @@
                          <img src="http://arcadefire.com/reflektorpreorder/assets/images/arcade-fire-ep.jpg" />  
                          <div class="details">  
                          <h2>Arcade Fire EP</h2>  
-                             <a href="#audio" class="info">discover</a>  
+                          <a href="#audio" class="info">discover</a>  
                          </div>  
                         </div>  
 
@@ -129,29 +129,56 @@
                 </div>
             </div>
 
-        <!-- start video section -->
-        <div class="container" id="video">
+<div class="container" id="video">
                 <div class="sectionHeader"><img src="video_header.png" /></div>
                 <div class="sectionContent">
-                  <div class="wrap">
-                    <div class="embeddedVideo" id="video1">
-                      <iframe id="vid1" width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="embeddedVideo" id="video2">
-                      <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="embeddedVideo" id="video3">
-                      <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                 </div>
-                 <div class="vidButtons"> 
-                    <ul>
-                        <li><a href="#leftB" title="leftB" class="leftButton"><img src="vid_left.png" alt="move to previous video"/></a></li>            
-                        <li><a href="#rightB" title="rightB" class="rightButton"><img src="vid_right.png" alt="move to next video" /></a></li>
-                    </ul>
-                </div>
+
+          <div class="wrap">
+           <div class="embeddedVideo" id="video1">
+              <iframe id="vid1" class='"vid1' width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
             </div>
+           <!-- <div id="player"></div> -->
+            <div class="embeddedVideo" id="video2">
+              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="embeddedVideo" id="video3">
+              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+         </div>
+         <div class="vidButtons"> 
+            <ul>
+                <li id="lb"><a href="#leftB" title="Scroll Right" class="leftButton"><img id="leftbut" src="vid_left.png"style="position: relative;" alt="move to previous video"/></a></li> 
+               
+                <li class="thumbnail afterlife">
+                     <img id="afterlife" class="thmb" src="afterlife.png" alt="Faline 1"style="position: relative;">        
+
+                </li>  
+                 <li class="thumbnail rebellion">
+                    <img id="rebellion" class="thmb" src="rebellion.png"  alt="Faline 1"style="position: relative;">
+                </li>
+                <li class="thumbnail suburbs">
+                    <img id ="suburbs" class="thmb" src="suburbs.png"  alt="Faline 1"style="position: relative;">
+                </li>  
+
+                 <li id="rb"><a href="#rightB" title="Scroll Left" class="rightButton"><img id="rightbut" src="vid_right.png" alt="move to next video"style="position: relative;" /></a>
+                 </li>                          
+            </ul>
+            <ul>
+              <li><div class="invisiblediv leftButton" id="invisible1"></div></li>
+              <li><img class="thumbnail" id="box" src="sliding_border_large.png" border="0" alt="Faline 2" style="position: relative;"></li>
+              <li><div class="invisiblediv rightButton" id="invisible2"></div></li>
+            <ul>
+
+
+        </div>
+
+      </div>
     </div>
+ <div class="video" id="video">
+
+        </div>
+                <script src="video2.js"></script>
+        <!-- end video section -->
         <!-- end video section -->
 
         <!-- live dates section -->

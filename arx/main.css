@@ -56,6 +56,12 @@ body.lightboxed {
   text-align: center;
 }
 
+
+
+/*-------------------------HEADERLOGO------ */
+
+
+
 /* home is the top 'splash' section of the website */
 #home {
   height:100%;
@@ -64,6 +70,7 @@ body.lightboxed {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align: center;
 }
 
 
@@ -296,7 +303,6 @@ li.icon a {
     height: 100%;
     width: 100%;
     position: absolute;
-    overflow: hidden;
     top: 0;
     left: 0
 }
@@ -450,16 +456,27 @@ a.dropdown{
 }
 
 
-/* -------------------------------- VIDEO */ 
 
-#video{
+
+/* -------------------------------- VIDEO */ 
+  #box{
+    margin: 0 auto;
+    opacity:0.8;
+     top:-115px;
+    z-index: 100;
+ }
+
+
+.video{
   width:100%;
   text-align: center;
   display: inline;
 }
 
+
 .embeddedVideo{
   margin:0 auto;
+
   width:50%;
   text-align: center;
   display: inline-block;
@@ -467,13 +484,39 @@ a.dropdown{
 }
 
 .vidButtons{
+
   padding: 10px 0 10px 0;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  width:100%;
+  display: inline-block;
+
+}
+
+
+
+
+.vidButtons li {
+  padding: 0 10px 0 10px;
+  display:inline-block;
+  clear:both;
 }
 
 .vidButtons li {
   padding: 0 10px 0 10px;
-  display:inline;
+  display:inline-block;
+  clear:both;
 }
+
+
+.vidButtons ul {
+  margin-left: -40px;
+  display: block;
+}
+
+
+
 
 #video2, #video3{
   display: none;
@@ -489,6 +532,33 @@ a.dropdown{
 .clear {
   clear: both;
 }
+
+.subpage{
+
+  width:100%;
+  text-align: center;
+}
+
+.invisiblediv{
+  height:90px;
+  width:120px;
+  background-color: red;
+  position: relative;
+  opacity: 0;
+  z-index: 999;
+}
+
+#invisible1{
+  left:5px;
+  bottom:120px;
+}
+
+#invisible2{
+  right:5px;
+  bottom:120px;
+}
+
+
 
 
 /* -------------------------------- LIVE */ 
@@ -658,6 +728,20 @@ tr#bit-event-7132928 td.bit-date a:after {
     padding: 7px 14px;
 
 
+}
+
+.album {
+    display:block;
+    width: 50%;
+    margin: 0 auto;
+    border: 10px solid #fff;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff 
+}
+.thumbnail{
+ display: none !important;
 }
 
 }
