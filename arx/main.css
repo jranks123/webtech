@@ -10,16 +10,15 @@ html {
 }
 
 #box{
+  margin: 0 auto;
   opacity:0.8;
-  right:340px;
-  top:5px;
+
+  top:-115px;
   z-index: 100;
 }
 
 
-#mark{
-  display: none;
-}
+
 /*make background 'cover style' for various OS*/
 body{
   /*background:url(bgheader1.jpg) no-repeat center center fixed;
@@ -384,19 +383,29 @@ li.icon a {
 
   padding: 10px 0 10px 0;
   text-align: center;
+  margin: 0 auto;
   overflow: hidden;
+  width:100%;
+  display: inline-block;
 
 }
 
-ul{
-overflow: hidden;
-}
+
 
 
 .vidButtons li {
   padding: 0 10px 0 10px;
-  display:inline;
+  display:inline-block;
+  clear:both;
 }
+
+.vidButtons ul {
+  margin-left: -40px;
+  display: block;
+
+}
+
+
 
 
 #video2, #video3{
@@ -419,6 +428,26 @@ overflow: hidden;
   width:100%;
   text-align: center;
 }
+
+.invisiblediv{
+  height:90px;
+  width:120px;
+  background-color: red;
+  position: relative;
+  opacity: 0;
+  z-index: 999;
+}
+
+#invisible1{
+  left:5px;
+  bottom:120px;
+}
+
+#invisible2{
+  right:5px;
+  bottom:120px;
+}
+
 
 
 @media screen and (max-width: 680px){
@@ -457,19 +486,23 @@ overflow: hidden;
 
 
 .nav ul li.inPage a{
+    bottom: 50px;
  padding: 16px 5px 16px 5px;
 
 }
 
+.nav ul{                 /*ADDED THIS IN*/
+  margin-top: -14px;
+}
 
 
 .nav .logo{
-  margin-left: 45%;
-  margin-right: 45%;
+  margin: 0 auto;
   margin-bottom: 10px;
-  float: left;
+  bottom:10px;
   position: relative;
   opacity: 1;
+  display: inline-block;
 }
 
 
@@ -481,6 +514,11 @@ overflow: hidden;
   width:80%;
 
 }
+
+.thumbnail{
+    display: none !important;
+
+}
 }
 
 @media screen and (min-width: 681px) and (max-width: 2000px){
@@ -490,11 +528,14 @@ overflow: hidden;
   }
 
 
- #Blog{
-    margin-left: 8px;
- }
 
+#leftbut{
+  bottom:30px;
+}
 
+#rightbut{
+  bottom:30px;
+}
 
 }
 
