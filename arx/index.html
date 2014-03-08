@@ -18,7 +18,7 @@
 
     <body id="main">
         <!-- splash image/top of site -->
-        <div class="home" id="home"></div>
+        <div class="container" id="home"></div>
         <!-- end splash area -->
 
         <!-- start navigation bar, above all page content -->
@@ -46,8 +46,10 @@
         <!-- ends marker -->
 
         <!-- start of 'about the band' section -->
-        <div id="band">
-          <h2>The Band</h2>
+        <div class="container" id="band">
+
+          <div class="sectionHeader"><img src="band_header.png" /></div>
+          <div class="sectionContent">
            <p>Band text here.</p>
            <p>Band text here.</p>
            <p>Band text here.</p>
@@ -56,12 +58,39 @@
            <p>Band text here.</p>
            <p>Band text here.</p>
            <p>Band text here.</p>
+        </div>
           <div class="clear"></div>
         </div>
         <!-- end of 'about the band' -->
 
+        <!-- parallax marker -->
+        <div class="pmarker"></div>
+        <!-- marker ends -->
+
+        <!-- music embeds and stuff -->
+        <div class="container" id="audio">
+            <div class="sectionOverlay">
+                <div class="sectionHeader"></div>
+                <div class="sectionContent">
+                    <div class="albums">
+                        <a href="javascript:void(0)" class="dropdown" id="reflektor"><img class="albumartwork" src="http://arcadefire.com/reflektorpreorder/assets/images/reflektor.jpg"></a>
+                        <a href="javascript:void(0)" class="dropdown" id="suburbs"><img class="albumartwork" src="http://arcadefire.com/reflektorpreorder/assets/images/the-suburbs.jpg"></a>
+                        <a href="javascript:void(0)" class="dropdown" id="neon"><img class="albumartwork" src="http://arcadefire.com/reflektorpreorder/assets/images/neon-bible.jpg"></a>
+                        <a href="javascript:void(0)" class="dropdown" id="funeral"><img class="albumartwork" src="http://arcadefire.com/reflektorpreorder/assets/images/funeral.jpg"></a>
+                        <a href="javascript:void(0)" class="dropdown" id="ep"><img class="albumartwork" src="http://arcadefire.com/reflektorpreorder/assets/images/arcade-fire-ep.jpg"></a>
+                    </div>
+                    <div class="drawer">
+                        <div class="drawerContent">
+                        Party and bullshit and party and bullshit.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- start video section -->
-        <div class="video" id="video">
+        <div class="container" id="video">
           <div class="wrap">
             <div class="embeddedVideo" id="video1">
               <iframe id="vid1" width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -82,6 +111,13 @@
         </div>
         <!-- end video section -->
 
+        <div class="container" id="live">
+            <div class="sectionHeader">
+            </div>
+            <div class="sectionContent">
+                <script type='text/javascript' src='https://www.bandsintown.com/javascripts/bit_widget.js'></script><a href="https://www.bandsintown.com/Arcade%20Fire" class="bit-widget-initializer" data-artist="Arcade Fire" data-prefix="fbjs">Bandsintown</a>
+            </div>
+        </div>
 
         <!--js for smooth scrolling-->
         <script>
@@ -144,14 +180,69 @@
         <!-- parallax header -->
         <script>
             var home = document.getElementById("home");
+            var audio = document.getElementById("audio");
             var speed = 1.5;
 
             window.onscroll = function()
             {
              var yOffset = window.pageYOffset;
              home.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
+             //audio.style.backgroundPosition = "0px "+ (yOffset / speed) + "px"; //distance + (yoffset/speed)
             }
         </script>
         <!-- end parallax header js -->
+
+        <!-- parallax elsewhere elements -->
+        <script>
+            //$(document).ready(function() {
+            //    $(window).scroll(function () {
+            //        var scrollToTop = $(window).scrollTop(),
+            //        eOffset         = $('.pmarker').offset().top,
+            //        paradistance    = (eOffset - scrollToTop);
+            //        
+            //       //fix the navbar at the top unless you're on the starting 'splash'
+            //       if ($(window).width() > 1) {
+            //            $("#audio").css("background-position", "0px " + (paradistance / 2) + "px");
+            //                });
+            //
+            //    });
+            //});
+        </script>
+        <!-- end parallax -->
+
+
+        <!-- jquery for drawer -->
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+          <script type="text/javascript">
+            window.addEventListener('load', function() {}, false);
+            $('#reflektor').click(function(e){
+              $('.drawer').toggleClass('active');
+              e.preventDefault(); 
+            });     
+          </script>
+
+           <script type="text/javascript">
+            $("#reflektor").click((function() {
+                var i = 0;
+                return function() {
+                    $('.drawer').animate({
+                        height: (++i % 2) ? 400 : 1
+                    }, 200);
+                }
+            })());
+
+            $("#neon").click((function() {
+                var i = 0;
+                return function() {
+                    $('.drawer').animate({
+                        height: (++i % 2) ? 400 : 1
+                    }, 200);
+                }
+            })());
+          </script>
+
+
+
+
     </body>
 </html>

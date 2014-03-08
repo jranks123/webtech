@@ -1,6 +1,3 @@
-/*load opensource font from google */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,600,700,800,900);
-
 html {
   /*background: #111; */
   width: 100%;
@@ -29,11 +26,13 @@ body.lightboxed {
   overflow: hidden;
 }
 
-/*invisible div to place above navigation bar for auto-scroll*/
-div #home {
+/*container element for each section of site */
+.container {
+  text-align: center;
 }
 
-.home {
+/* home is the top 'splash' section of the website */
+#home {
   height:100%;
   background: url('bgheader1.jpg') no-repeat;
   -webkit-background-size: cover;
@@ -42,6 +41,8 @@ div #home {
   background-size: cover;
 }
 
+
+/* -------------------------------- NAVIGATION BAR  */ 
 /* navbar properties */
 .nav {
   /*top:0px;*/
@@ -56,14 +57,14 @@ div #home {
   z-index:999;
   display:block;
   font-family:Courier;
-  border-bottom: 1px #ddd solid;}
+}
 
-  .navbar-fixed {
-    top: 0;
-    z-index: 999;
-    position: fixed;
-    margin-top: 0px;
-    background: rgba(0,0,0,.85);
+.navbar-fixed {
+  top: 0;
+  z-index: 999;
+  position: fixed;
+  margin-top: 0px;
+  background: rgba(0,0,0,.85);
 }
 
 .nav .logo{
@@ -172,60 +173,28 @@ li.icon a {
   margin-left: 8px;
 }
 
-#homepage{
-    height: 200px;
+
+/* -------------------------------- ALL GENERAL SECTIONS */ 
+.sectionHeader{
+  padding: 70px 0 0 0;
 }
 
-.homepage{
-   /* width:100%;
-    height:100%;
-    background: #fff url(bgheader1.jpg) no-repeat fixed 0 0; 
-    overflow:auto;*/
+.sectionHeader img{
+  width: 40%;
 }
 
-/*#homepage {
-  width: 100%;
-  height: 730px;
+.sectionOverlay {
+  height:100%;
+  width:100%;
+  background: rgba(0,0,0,.77);
+}
+
+.sectionContent {
   text-align: center;
-  overflow: auto;
-  position: relative;
-  z-index: -1;
-
-}*/
-
-#homepage h1 {
-  margin: 0px;
-  color: #db0000;
-  font: 220px/1 'Open Sans';
-  font-weight: 900;
-  opacity: .6;
-  padding-top: 230px;
-  letter-spacing: -10px;
-  cursor: pointer;
-  z-index: 0;
-  position: relative;
 }
 
-#homepage h2 {
-  color: #fff;
-  opacity: .8;
-  font-weight: 900;
-  font-style: normal;
-  line-height: 0px;
-  padding: 0px;
-  cursor: pointer;
-  white-space: nowrap;
-}
 
-#homepage h3 {
-  color: #fef200;
-  font-weight: 900;
-  font-size: 40px;
-  opacity: .8;
-  margin: 0px;
-  cursor: pointer;
-}
-
+/* -------------------------------- ABOUT */ 
 
 #band {
   background: #fff;
@@ -233,16 +202,19 @@ li.icon a {
   height:1000px;
   text-align: center;
   position: relative;
-  z-index: -1; 
+  z-index: 1; 
   font-family: Arial, sans-serif;
 }
+
 #band #bandp {
   width:100%;
   max-width: 400px;
 }
+
 #band h2 {
   padding-top: 50px;
 }
+
 #band .bio {
   color: #777;
   width: 45%;
@@ -253,13 +225,108 @@ li.icon a {
   line-height: 28px;
 }
 
+/* -------------------------------- AUDIO */ 
 
-.video{
+#audio {
+  background: url('bgheader2.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 1;
+}
+
+.albums{
+  position:relative;
+  z-index: 3;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.albums img {
+  border:10px solid #fff;
+}
+
+.albumartwork{
+  width: 200px;
+  margin: 5px 5px 5px 5px;
+  z-index: 3;
+}
+
+
+.drawer {
+  position:relative;
+  -webkit-transform: translate3d(-2000px,0 , 0);
+  -moz-transform: translate3d(-2000px, 0, 0);
+  -o-transform: translate3d(-2000px, 0, 0);
+  transform: translate3d(-2000px, 0, 0);
+  -webkit-transition:-webkit-transform 0.25s linear;
+  -moz-transition:-moz-transform 0.25s linear;
+  -o-transition:-o-transform 0.25s linear;
+  transition:transform 0.25s linear;
+  z-index: 0;
+}
+
+.drawer.active {
+  position:relative;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  z-index: 0;
+}
+
+.drawerContent{
+  position:relative;
+  font-family: Arial, sans-serif;
+  color:#fff;
+  z-index: 0;
+}
+
+a.dropdown{
+
+}
+
+.spotify {
+  position: relative;
+  padding-bottom: 0;
+  height: 400px;
+  width: 20%;
+  float: left;
+  margin: 0 3% 6% 3%;
+}
+
+.spotify:nth-child(even) {  
+  margin: 0 0 6% 0;
+}
+
+.spotify iframe {
+  width: 100%;
+}
+
+/* ----fallback css */
+
+.no-csstransforms .top {
+  position: static;
+}
+
+.no-csstransforms .drawer nav {
+  display: none;
+}
+
+.no-csstransforms .drawer.active nav {
+  display: block;
+}
+
+
+/* -------------------------------- VIDEO */ 
+
+#video{
   width:100%;
   text-align: center;
   display: inline;
 }
-
 
 .embeddedVideo{
   margin:0 auto;
@@ -292,6 +359,67 @@ li.icon a {
 .clear {
   clear: both;
 }
+
+
+/* -------------------------------- LIVE */ 
+#live{
+  background: rgba(0,0,0,.85);
+}
+
+article.post-9 .entry table td {
+  text-align: left !important;
+}
+
+#bit-widget-0, #bit-widget-0 a, .bit-widget-container {
+  font-size: 17px !important;
+  line-height: 24px !important;
+}
+
+tr.bit-header, tr.bit-bottom, td.bit-rsvp, #bit-widget-0 th, td.bit-description-links {
+  display: none;
+}
+
+#bit-widget-0 #bit-events tbody tr td.bit-date {
+  width: 13% !important;
+}
+
+#bit-widget-0 #bit-events tbody tr td.bit-venue {
+  width: 50% !important;
+}
+
+#bit-widget-0 #bit-events tbody tr td.bit-venue a {
+  font-size: 19px !important;
+}
+
+#bit-widget-0 #bit-events tbody tr td.bit-location {
+  width: 30% !important;
+}
+
+article.post-9 a, article.post-9 a:visited {
+  color: #ffffff;
+  font: normal 400 18px/24px 'carolineregular', "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+}
+
+article.post-9 a.bit-buy-tix {
+  display: block;
+  background-color: #222222;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+article.post-9 a.bit-buy-tix:hover {
+  background-color: #666666;
+}
+
+tr#bit-event-7132928 td.bit-date a:after {
+  content:" - May 31";
+}
+
+
+/* ------------------------------------------------------- SIZE CHANGE */
+
 
 @media screen and (max-width: 680px){
 
@@ -346,7 +474,20 @@ li.icon a {
  li.icon {
     display:none;
  }
+
+.sectionHeader{
+  padding: 120px 0px 20px 0px;
 }
+
+.sectionHeader img{
+  width: 60%;
+}
+
+}
+
+
+/* ------------------------------------------------------- SIZE CHANGE */
+
 
 @media screen and (min-width: 681px) and (max-width: 2000px){
 
