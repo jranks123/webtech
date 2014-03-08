@@ -68,18 +68,18 @@ $(function() {
 			hideVid('#video1', 'vid1', ' ');
 			showVid('#video2', 'vid2', 'http://www.youtube.com/embed/T4JrQpzno5Y?controls=0&showinfo=0');
 			changeZindex(10, 10, 0);
-			moveVids("+=144px", "+=144px", "-=288px");
+			moveVids("+=150px", "+=150px", "-=300px");
 
 		}else if ($('#video2').is(':visible')){
 			hideVid('#video2', 'vid2', ' ');
 			showVid('#video3', 'vid3', 'http://www.youtube.com/embed/EcKinnMXuKg?controls=0&showinfo=0');
 			changeZindex(10, 0, 10);
-			moveVids("+=144px","-=288px", "+=144px");
+			moveVids("+=150px","-=300px", "+=150px");
 		}else if ($('#video3').is(':visible')){
 			hideVid('#video3', 'vid3', ' ');
 			showVid('#video1', 'vid1', 'http://www.youtube.com/embed/8dqEJSTLOQM?controls=0&showinfo=0');
 				changeZindex(0, 10, 10);
-			moveVids("-=288px", "+=144px", "+=144px");
+			moveVids("-=300px", "+=150px", "+=150px");
 
 		}
 	});
@@ -89,17 +89,17 @@ $(function() {
 			hideVid('#video1', 'vid1', ' ');
 			showVid('#video3', 'vid3', 'http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0');
 			changeZindex(0, 10, 10);
-			moveVids("+=288px", "-=144px", "-=144px");
+			moveVids("+=300px", "-=150px", "-=150px");
 		}else if ($('#video2').is(':visible')){
 			hideVid('#video2', 'vid2', ' ');
 			showVid('#video1', 'vid1', 'http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0');
 			changeZindex(10, 10, 0);
-			moveVids( "-=144px", "-=144px", "+=288px");
+			moveVids( "-=150px", "-=150px", "+=300px");
 		}else if ($('#video3').is(':visible')){
 			hideVid('#video3', 'vid3', ' ');
 			showVid('#video2', 'vid2', 'http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0');
 			changeZindex(10, 0, 10);
-			moveVids("-=144px","+=288px", "-=144px");
+			moveVids("-=150px","+=300px", "-=150px");
 			
 		}
 	});

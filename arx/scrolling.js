@@ -17,11 +17,13 @@
             $(document).ready(function() {
 
                 $(window).scroll(function () {
-                    var scrollTop     = $(window).scrollTop(),
-                    elementOffset     = $('.marker').offset().top,
-                    distance          = (elementOffset - scrollTop);
-                    //secondaryOffset   = $('.band').offset().top;
-                    //secondaryDistance = (secondaryOffset - scrollTop);
+                    var scrollTop = $(window).scrollTop(),
+                    windowHeight = $(window).height(),
+                    elementOffset = $('.marker').offset().top,
+                    logoElementOffset = $('.logoMarker').offset().top,
+                    distance = (elementOffset - scrollTop),
+                    logoDistance = (logoElementOffset - scrollTop),
+                    proportion = distance/windowHeight;                    //secondaryDistance = (secondaryOffset - scrollTop);
                     
                     //fix the navbar at the top unless you're on the starting 'splash'
                     if ($(window).width() > 680) {
@@ -45,6 +47,16 @@
                             $('#logo').removeClass('logo-fixed');                    
                         }
                     }
+
+                    for(i = 0; i < 1; i = i + 0.1){
+                        if (proportion < i) {
+                            $('#logosvg').addClass('newlogo' + Math.round( (i * 10)+2 ));
+                         }
+
+                        if (proportion > i) {
+                            $('#logosvg').removeClass('newlogo'+ Math.round( (i * 10)+2 ));
+                        }
+                  }
 
             });
             });
@@ -75,6 +87,8 @@
             //});
 
 
+
+
             window.addEventListener('load', function() {}, false);
             $('#reflektor').click(function(e){
               $('.drawer').toggleClass('active');
@@ -84,7 +98,10 @@
             $(".info").click((function() {
                 var i = 0;
                 return function() {
-                    $('.drawer').animate({
-                        height: 400 }, 200);
+
+                    $('#audio').animate({
+                       height: '100%'}, 200);
                 }
             })());
+
+             
