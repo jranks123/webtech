@@ -13,11 +13,12 @@ html {
   opacity:0.8;
   right:340px;
   top:5px;
+  z-index: 100;
 }
 
 
 #mark{
-  opacity:0;
+  display: none;
 }
 /*make background 'cover style' for various OS*/
 body{
@@ -383,11 +384,12 @@ li.icon a {
 
   padding: 10px 0 10px 0;
   text-align: center;
+  overflow: hidden;
 
 }
 
-.vidButtons ul{
-
+ul{
+overflow: hidden;
 }
 
 
