@@ -17,6 +17,9 @@ html {
   z-index: 100;
 }
 
+.rel{
+  position: relative;
+}
 
 
 /*make background 'cover style' for various OS*/

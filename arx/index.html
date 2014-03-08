@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
         <title>Arcade Fire</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="intervention.css">
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <link rel="stylesheet" type="text/css" href="intervention.css"/>
         <!--<link rel="stylesheet" href="theme.css"> -->
         <script src="js/vendor/modernizr.custom.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="jquery.backstretch.min.js"></script>
-        <script src="raphael-min.js"></script>
         <!--<style>body{background:url(<! image url here >) no-repeat;background-attachment:fixed}</style>-->
-        <script src="videoStuff.js"></script>
+        <script src="videostuff.js"></script>
 
 
 
@@ -78,140 +77,52 @@
         <div class="video" id="video">
           <div class="wrap">
            <div class="embeddedVideo" id="video1">
-              <iframe id="vid1" class='"vid1' width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
-            </div>
+           <!--   <iframe id="vid1" class='"vid1' width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+            </div> -->
            <!-- <div id="player"></div> -->
             <div class="embeddedVideo" id="video2">
-              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+            <!--  <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>-->
             </div>
             <div class="embeddedVideo" id="video3">
-              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+           <!--   <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe> -->
             </div>
          </div>
          <div class="vidButtons"> 
             <ul>
-                <li id="lb"><a href="#leftB" title="Scroll Right" class="leftButton"><img id="leftbut" src="vid_left.png"style="position: relative;" alt="move to previous video"/></a></li> 
+                <li id="lb"><a href="#leftB" title="Scroll Right" class="leftButton rel"><img id="leftbut" src="vid_left.png" alt="move to previous video"/></a></li> 
                
                 <li class="thumbnail afterlife">
-                     <img id="afterlife" class="thmb" src="afterlife.png" alt="Faline 1"style="position: relative;">        
-
+                     <img id="afterlife" class="thmb rel" src="afterlife.png" alt="Faline 1" />        
                 </li>  
                  <li class="thumbnail rebellion">
-                    <img id="rebellion" class="thmb" src="rebellion.png"  alt="Faline 1"style="position: relative;">
+                    <img id="rebellion" class="thmb rel" src="rebellion.png"  alt="Faline 1" />
                 </li>
                 <li class="thumbnail suburbs">
-                    <img id ="suburbs" class="thmb" src="suburbs.png"  alt="Faline 1"style="position: relative;">
+                    <img id ="suburbs" class="thmb rel" src="suburbs.png"  alt="Faline 1" />
                 </li>  
 
-                 <li id="rb"><a href="#rightB" title="Scroll Left" class="rightButton"><img id="rightbut" src="vid_right.png" alt="move to next video"style="position: relative;" /></a>
+                 <li id="rb"><a href="#rightB" title="Scroll Left" class="rightButton rel"><img id="rightbut" src="vid_right.png" alt="move to next video" /></a>
                  </li>                          
             </ul>
             <ul>
               <li><div class="invisiblediv leftButton" id="invisible1"></div></li>
-              <li><img class="thumbnail" id="box" src="sliding_border_large.png" border="0" alt="Faline 2" style="position: relative;"></li>
+              <li><img class="thumbnail rel" id="box" src="sliding_border_large.png" border="0" alt="Faline 2" /></li>
               <li><div class="invisiblediv rightButton" id="invisible2"></div></li>
-            <ul>
+            </ul>
 
 
         </div>
         </div>
+      </div>
                 <script src="video2.js"></script>
+                <script src="scrolling.js"></script>
+
         <!-- end video section -->
 
 
 
 
-        <!--js for smooth scrolling-->
-        <script>
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-                || location.hostname == this.hostname) {
 
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                   if (target.length) {
-                     $('html,body').animate({
-                         scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-        </script>
-        <!-- end of smooth scrolling -->
-
-        <!-- js for nav bar pin -->
-        <script>
-            $(document).ready(function() {
-
-                $(window).scroll(function () {
-                    var scrollTop     = $(window).scrollTop(),
-                    windowHeight      = $(window).height(),
-                    elementOffset     = $('.marker').offset().top,
-                    logoElementOffset = $('.logoMarker').offset().top,
-                    distance          = (elementOffset - scrollTop),
-                    logoDistance      = (logoElementOffset - scrollTop),
-                    proportion        = distance/windowHeight;
-
-
-
-                    //secondaryOffset   = $('.band').offset().top;
-                    //secondaryDistance = (secondaryOffset - scrollTop);
-
-                    //fix the navbar at the top unless you're on the starting 'splash'
-                    if ($(window).width() > 680) {
-                        if (distance < 50) {
-                            $('#nav').addClass('navbar-fixed');
-                            $('#logo').addClass('logo-fixed');
-                         }
-                        if (distance > 51) {
-                            $('#nav').removeClass('navbar-fixed');
-                            $('#logo').removeClass('logo-fixed');                    
-                        }
-                       // console.log(proportion);
-
-                      }
-
-                    
-                    //amended for mobile devices alternate navigation size
-                    if ($(window).width() < 681) {
-                        if (distance < 90) {
-                            $('#nav').addClass('navbar-fixed');
-                            $('#logo').addClass('logo-fixed');
-                         }
-                        if (distance > 91) {
-                            $('#nav').removeClass('navbar-fixed');
-                            $('#logo').removeClass('logo-fixed');                    
-                        }
-                    }
-
-                   for(i = 0; i < 1; i = i + 0.1){
-                        if (proportion < i) {
-                            $('#logosvg').addClass('newlogo' + Math.round( (i * 10)+2 ));
-                         }
-
-                        if (proportion > i) {
-                            $('#logosvg').removeClass('newlogo'+ Math.round( (i * 10)+2 ));                   
-                        }
-                  }
-
-            });
-            });
-        </script>
-        <!-- end nav bar pinning code -->
-
-        <!-- parallax header -->
-        <script>
-            var home = document.getElementById("home");
-            var speed = 1.5;
-
-            window.onscroll = function()
-            {
-             var yOffset = window.pageYOffset;
-             home.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
-            }
-        </script>
-        <!-- end parallax header js -->
 
 
        
