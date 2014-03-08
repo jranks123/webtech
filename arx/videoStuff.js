@@ -44,9 +44,11 @@ $(function() {
 	// Kick off one resize to fix all videos on page load
 	}).resize();
 
+
+
 	$('.rightButton').on('click', function() {
 		$('#box').animate({ 
-        right: "-=30%",
+        right: "-=144px",
       }, 'slow' );
 
 		if ($('#video1').is(':visible')){
@@ -63,7 +65,7 @@ $(function() {
 
 	$('.leftButton').on('click', function() {
 		$('#box').animate({ 
-        right: "+=30%",
+        right: "+=144px",
       }, 'slow' );
 		if ($('#video1').is(':visible')){
 			hideVid('#video1', 'vid1', ' ');

@@ -9,6 +9,15 @@ html {
   margin: 0;
 }
 
+#box{
+  opacity:0.8;
+  right:191px;
+}
+
+
+#mark{
+  opacity:0;
+}
 /*make background 'cover style' for various OS*/
 body{
   /*background:url(bgheader1.jpg) no-repeat center center fixed;
