@@ -2,11 +2,11 @@
 body{
   /*background:url(bgheader3.jpg) no-repeat center center fixed;*/
   /*background-attachment: fixed;
-  background-position-x: center !important;*/
+  background-position-x: center !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 .nav .logo a{

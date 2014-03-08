@@ -64,7 +64,7 @@
         <div class="pmarker"></div>
         <!-- marker ends -->
 
-        <!-- music embeds and stuff -->
+        <!-- start audio section -->
         <div class="container" id="audio">
             <div class="sectionOverlay">
                 <div class="sectionHeader"><img src="music_header_white.png" /></div>
@@ -131,57 +131,53 @@
                     </div>
                 </div>
             </div>
+            <!-- end audio section -->
 
-<div class="container" id="video">
-                <div class="sectionHeader"><img src="video_header.png" /></div>
-                <div class="sectionContent">
+            <!-- video section -->
+        <div class="container" id="video">
+            <div class="sectionHeader"><img src="video_header.png" /></div>
+            <div class="sectionContent">
+              <div class="wrap">
+               <div class="embeddedVideo" id="video1">
+                  <iframe id="vid1" class='"vid1' width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+               <!-- <div id="player"></div> -->
+                <div class="embeddedVideo" id="video2">
+                  <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="embeddedVideo" id="video3">
+                  <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+             </div>
+             <div class="vidButtons"> 
+                <ul>
+                    <li id="lb"><a href="javascript:void(0)" title="Scroll Right" class="leftButton"><img id="leftbut" class="rel" src="vid_left.png" alt="move to previous video"/></a></li> 
+                   
+                    <li class="thumbnail afterlife">
+                         <img id="afterlife" class="thmb rel" src="afterlife.png" alt="Faline 1" >        
 
-          <div class="wrap">
-           <div class="embeddedVideo" id="video1">
-              <iframe id="vid1" class='"vid1' width="560" height="315" src="http://www.youtube.com/embed/8dqEJSTLOQM?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                    </li>  
+                     <li class="thumbnail rebellion">
+                        <img id="rebellion" class="thmb rel" src="rebellion.png"  alt="Faline 1">
+                    </li>
+                    <li class="thumbnail suburbs">
+                        <img id ="suburbs" class="thmb rel" src="suburbs.png"  alt="Faline 1">
+                    </li>  
+
+                     <li id="rb"><a href="javascript:void(0)" title="Scroll Left" class="rightButton"><img id="rightbut" class="rel" src="vid_right.png" alt="move to next video" /></a>
+                     </li>                          
+                </ul>
+                <ul>
+                  <li><div class="invisiblediv leftButton rel" id="invisible1"></div></li>
+                  <li><img class="thumbnail rel" id="box" src="sliding_border_large.png" border="0" alt="Faline 2" ></li>
+                  <li><div class="invisiblediv rightButton rel" id="invisible2"></div></li>
+                </ul>
             </div>
-           <!-- <div id="player"></div> -->
-            <div class="embeddedVideo" id="video2">
-              <iframe id="vid2" width="560" height="315" src="http://www.youtube.com/embed/T4JrQpzno5Y?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                <script src="video2.js"></script>
             </div>
-            <div class="embeddedVideo" id="video3">
-              <iframe id="vid3" width="560" height="315" src="http://www.youtube.com/embed/EcKinnMXuKg?&autohide=1&showinfo=0&enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
-            </div>
-         </div>
-         <div class="vidButtons"> 
-            <ul>
-                <li id="lb"><a href="#leftB" title="Scroll Right" class="leftButton"><img id="leftbut" class="rel" src="vid_left.png" alt="move to previous video"/></a></li> 
-               
-                <li class="thumbnail afterlife">
-                     <img id="afterlife" class="thmb rel" src="afterlife.png" alt="Faline 1" >        
-
-                </li>  
-                 <li class="thumbnail rebellion">
-                    <img id="rebellion" class="thmb rel" src="rebellion.png"  alt="Faline 1">
-                </li>
-                <li class="thumbnail suburbs">
-                    <img id ="suburbs" class="thmb rel" src="suburbs.png"  alt="Faline 1">
-                </li>  
-
-                 <li id="rb"><a href="#rightB" title="Scroll Left" class="rightButton"><img id="rightbut" class="rel" src="vid_right.png" alt="move to next video" /></a>
-                 </li>                          
-            </ul>
-            <ul>
-              <li><div class="invisiblediv leftButton rel" id="invisible1"></div></li>
-              <li><img class="thumbnail rel" id="box" src="sliding_border_large.png" border="0" alt="Faline 2" ></li>
-              <li><div class="invisiblediv rightButton rel" id="invisible2"></div></li>
-            <ul>
-
-  <script src="video2.js"></script>
         </div>
-
-      </div>
-  </div>
-
-
-
         <!-- end video section -->
-        <!-- end video section -->
+
 
         <!-- live dates section -->
         <div class="container" id="live">
@@ -232,8 +228,7 @@
             </div>
         <!-- end footer -->
 
-  <script src="scrolling.js"></script>
-
-
+    <script src="scrolling.js"></script>
+    <script src="parascroll.js"></script>
     </body>
 </html>

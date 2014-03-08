@@ -22,7 +22,6 @@
 }
 
 html {
-  /*background: #111; */
   width: 100%;
   height: 100%;
   padding: 0;
@@ -70,6 +69,9 @@ body.lightboxed {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center !important;
+  background-position-y: -200px;
   text-align: center;
 }
 
@@ -287,9 +289,8 @@ li.icon a {
 /* -------------------------------- ABOUT */ 
 
 #band {
-  background: #fff;
+  background: url('bgfeather_small.png');
   width:100%;
-
   text-align: center;
   position: relative;
   z-index: 1; 
@@ -318,12 +319,9 @@ li.icon a {
 /* -------------------------------- AUDIO */ 
 
 #audio {
-  background: url('bgheader2.jpg') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 1;
+  background: url('bgheader2.jpg') no-repeat top center;
+  background-attachment: fixed;
+  z-index: 0;
   height:50%;
   min-height: 400px;
 }
@@ -519,24 +517,27 @@ a.dropdown{
 
 
 /* -------------------------------- VIDEO */ 
-  #box{
+#box{
     margin: 0 auto;
     opacity:0.8;
-     top:-115px;
+    top:-115px;
     z-index: 100;
+
  }
 
 
-.video{
-  width:100%;
+#video{
+  background: url('bgfeather_small.png');
   text-align: center;
-  display: inline;
+}
+
+.wrap {
+
 }
 
 
 .embeddedVideo{
   margin:0 auto;
-
   width:50%;
   text-align: center;
   display: inline-block;
