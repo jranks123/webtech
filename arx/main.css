@@ -226,6 +226,10 @@ li.icon a {
   text-align: center;
 }
 
+.rel{
+  position:relative;
+}
+
 
 /* -------------------------------- ABOUT */ 
 
@@ -429,7 +433,6 @@ a.dropdown{
   padding-bottom: 0;
   height: 250px;
   width: 20%;
-  float: left;
   margin: 0 3% 6% 3%;
 }
 
