@@ -2,6 +2,7 @@
             var functionIsFree = 1;
 
             function slider(album){ 
+                $('.drawer').addClass('inline');  
                 var allDraw = $('.drawer');
                 var empty = true;
                 allDraw.each(function() {
@@ -15,6 +16,9 @@
                     height: div_height}, 200); 
                     $(album).toggleClass('hideB'); 
                     window.setTimeout(function(){ $(album).toggleClass('active');},400);
+                           
+
+
                 }else if($(album).is(':visible')){
                    var div_height = $('#audio').height() - 400;
                          $(album).toggleClass('active');
@@ -22,8 +26,9 @@
                         $('#audio').animate({
                             height: div_height}, 200);
                 } else{
+                  $('.drawer').removeClass('inline');  
                   $(album).toggleClass('hideB'); 
-                       
+                  
                   allDraw.not(album).each(function() {
                     if($(this).is(":visible")){
                          $(this).toggleClass('active');

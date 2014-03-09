@@ -489,8 +489,10 @@ li.icon a {
   -o-transition:-o-transform 0.5s linear;
   transition:transform 0.5s linear;
   z-index: 10;
-  display: inline;
-  text-align: center;
+}
+
+.inline{
+    display: inline;
 }
 
 
@@ -513,14 +515,23 @@ li.icon a {
 
 }
 
+.drawer.activeRight {
+  position:relative;
+  -webkit-transform: translate3d(3000px,0,0);
+  -moz-transform: translate3d(3000px,0,0);
+  -o-transform: translate3d(3000px,0,0);
+  transform: translate3d(3000px,0,0);
+
+}
+
 .drawerContent{
     font-family: Arial, sans-serif;
     color: #fff;
     width: 100%;
     overflow:hidden;
-    margin: 0 auto;
+
     display: inline-block;
-      text-align: center;
+    text-align: center;
 }
 
 .leftcol, .rightcol {
