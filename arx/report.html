@@ -24,7 +24,7 @@
 
                 <p>This blog is already live on the client's website <a href="http://arcadefire.com" alt="Arcade Fire Website">viewable here</a>. We will discuss the work and process for this in a later section of this report.</p>
 
-                <p>As a brief summary, during this project we have used: XHTML, CSS, JavaScript, jQuery, PHP (minor for WordPress implementation), Photoshop, Gimp, Inkscape and attempted animation with SVGs, JavaScript and CSS.              
+                <p>As a brief summary, during this project we have used: XHTML, CSS, JavaScript, jQuery, PHP (minor for WordPress implementation), Photoshop, Gimp, Inkscape and attempted animation with SVGs, JavaScript and CSS. We have attempted to use as few CSS libraries as possible to focus on implementing things such as responsive design by hand.             
             </div>
 
             <div class="text" id="nav">
@@ -70,14 +70,14 @@
 
             <div class="text" id="goextra">
                 <h1>'Loading...'</h1>
-                <p>We created a side-preloader that allows the site to have an air of professionalism while it loads. Instead of witnessing the images steadily load in front of a user, a loading catch page makes sure the site is not displayed until it is complete. Neither of us had experience with creating pre-loaders before, however we had attempted to implement lightboxes in a previous project and applying the same principle was able to create on quickly. </p>
-                <p>Using a fixed div that occupies the full height and width of the screen </p>
+                <p>We created a preloader that allows the site to have an air of professionalism while it loads. Instead of witnessing the images steadily load in front of a user, a loading catch page makes sure the site is not displayed until it is complete. Neither of us had experience with creating pre-loaders before, however we had attempted to implement lightboxes in a previous project and applying the same principle was able to create one quickly. </p>
+                <p>Using a fixed div that occupies the full height and width of the screen, containing only a CSS-animated rotating .png created in Photoshop, creates the illusion of a loading page while hiding the real page-load behind it. We use jQuery to notice when the page has finished loading and then fade out the elements of the the preloader. The jQuery fade out animations were modified from an old lightbox implementation, which came from a tutorial used for self-study last year.</p>
             </div>
 
 
             <div class="text" id="goextra">
                 <h1>Video Carousel</h1>
-                <p>Text here</p>
+                <p>To see this implementation in a working state (including the YouTube video custom play/pause instructions) visit here: <a href="http://cyoa.co.uk/jordan/sub/" alt="Web Tech Submission">alternative host</a>.</p>
             </div>
 
             <div class="text" id="gallery">
