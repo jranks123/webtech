@@ -31,7 +31,7 @@ html {
 
 /*make background 'cover style' for various OS*/
 body{
-  /*background:url(bgheader1.pngbg) no-repeat center center fixed;
+  /*background:url(bgheader1.png) no-repeat center center fixed;
   background-attachment: fixed;
   background-position-x: center !important;*/
   -webkit-background-size: cover;
@@ -43,16 +43,62 @@ body{
   padding: 0;
   margin: 0;
   font-family: 'CourierRegular', "Courier New", Courier, monospace !important;
-}
+  overflow: hidden;
 }
 
+#preloader{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  background: #000;
+  z-index: 9999;
+}
 
+#rotatinglogo {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; 
+    top:50%; 
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:-17px 0 0 -25px;
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+    }
+
+@-moz-keyframes spin { 
+  100% { 
+    -moz-transform: rotate(360deg); 
+    } 
+  }
+@-webkit-keyframes spin {
+ 100% {
+  -webkit-transform: rotate(360deg); 
+  }
+}
+@keyframes spin { 
+  100% {
+   -webkit-transform: rotate(360deg); transform:rotate(360deg); 
+   } 
+ }
 
 p {
   margin-bottom: 0px;
   padding-bottom: 10px;
 }
-
 
 body.lightboxed {
   height: 100%;
@@ -72,14 +118,22 @@ body.lightboxed {
 
 /* home is the top 'splash' section of the website */
 #home {
-  height:100%;
-  width:100%;
-  background: url('bgheader1.png') no-repeat;
+  background: url('bgheader1.png') repeat;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  height: 100%;
+  width: 100%;
   background-attachment: fixed;
   background-position-x: center !important;
   background-position-y: -200px;
+  background-position: center -200px; /*bug fix for firefox*/
   text-align: center;
 }
+
+
+
 
 /*-------------------------LOGO  -*/
 
@@ -170,7 +224,7 @@ fill:green;
 }
 
 .nav .logo a{
-  background: url(img/logo_small_white.png) 0 0 no-repeat;
+  background: url(logo_small_white.png) 0 0 no-repeat;
   font-size:0;
   display: block;
   width:34px;
@@ -222,27 +276,27 @@ text-decoration:none;
 
 
 li.icon a {
-  background: url(img/socialicons.png) 0 -0px no-repeat;
+  background: url(socialicons.png) 0 -0px no-repeat;
 }
 
 li.icon a.twitter {
-  background: url(img/socialicons.png) -16px -0px no-repeat;
+  background: url(socialicons.png) -16px -0px no-repeat;
 }
 
 li.icon a.instagram {
-  background: url(img/socialicons.png) -32px -0px no-repeat;
+  background: url(socialicons.png) -32px -0px no-repeat;
 }
 
 li.icon a.facebook {
-  background: url(img/socialicons.png) -0 -0px no-repeat;
+  background: url(socialicons.png) -0 -0px no-repeat;
 }
 
 li.icon a.youtube {
-  background: url(img/socialicons.png) -64px -0px no-repeat;
+  background: url(socialicons.png) -64px -0px no-repeat;
 }
 
 li.icon a.soundcloud {
-  background: url(img/socialicons.png) -80px -0px no-repeat;
+  background: url(socialicons.png) -80px -0px no-repeat;
 }
 
 .nav li.icon {
@@ -258,7 +312,7 @@ li.icon a.soundcloud {
 li.icon a {
     display: block;
     width: 16px;
-    background: url(img/socialicons.png) 0 0 no-repeat;
+    background: url(socialicons.png) 0 0 no-repeat;
     font-size: 0;
 }
 
@@ -283,8 +337,10 @@ li.icon a {
 }
 
 .sectionContent {
+
   padding: 10px 0 0 0;
   text-align: center;
+  margin: 0 auto;
 }
 
 .rel{
@@ -297,30 +353,51 @@ li.icon a {
 #band {
   background: url('bgfeather_small.png');
   width:100%;
-
   text-align: center;
   position: relative;
   z-index: 1; 
   font-family: Arial, sans-serif;
+  margin: 0 auto;
 }
 
-#band #bandp {
-  width:100%;
-  max-width: 400px;
-}
-
-#band h2 {
-  padding-top: 50px;
-}
-
-#band .bio {
+.bandbio {
   color: #777;
-  width: 45%;
-  padding:0 50px 50px 0;
-  float:right;
-  text-align: justify;
+  position: relative;
+  width: 77%;
+  display: inline-block;
   font-size: 14px;
   line-height: 28px;
+}
+
+.bandbio p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.bandbio img {
+    display: inline-block;
+    margin: 10px auto 0;
+}
+
+.photochange {
+  margin: 0 auto;
+  width: 260px; 
+  height: 260px; 
+  position: relative;
+  overflow: hidden;
+}
+
+.photochange img {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+.sectionfooter {
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 /* -------------------------------- AUDIO */ 
@@ -360,7 +437,7 @@ li.icon a {
   z-index: 3;
   text-align: center;
   margin: 0 auto;
-  height: 100%;
+ height: 100%;
   margin-bottom: 5%;
 }
 
@@ -373,16 +450,15 @@ li.icon a {
   margin: 5px 5px 5px 5px;
   z-index: 3;
 }
+
 .album {
     max-width: 200px;
     max-height: 200px;
-    height: 100%;
     display:inline-block;
     width: 13%;
     margin: 10px;
     border: 10px solid #fff;
     overflow: hidden;
-
     position: relative;
     text-align: center;
     cursor: default;
@@ -494,7 +570,7 @@ li.icon a {
 }
 
 .inline{
-    display: inline;
+  display:inline;
 }
 
 
@@ -526,7 +602,6 @@ li.icon a {
 
 }
 
-
 .drawerContent{
     font-family: Arial, sans-serif;
     color: #fff;
@@ -556,22 +631,17 @@ a.dropdown{
 
 }
 
-
-a.dropdown{
-
-}
-
 .leftcol img{
   height:100%;
   max-height: 250px;
 }
+
 
 .albumabout{
   padding:10px 0 0 20px;
   float:left;
   text-align: left;
   line-height: 24px;
-  font-size:small;
 }
 
 .spotify {
@@ -616,7 +686,7 @@ a.dropdown{
 
 
 #video{
-  background: url('bgsnowpng');
+  background: url('bgsnow.png');
   text-align: center;
 }
 
@@ -632,7 +702,6 @@ a.dropdown{
 }
 
 .vidButtons{
-
   padding: 10px 0 10px 0;
   text-align: center;
   margin: 0 auto;
@@ -766,13 +835,35 @@ a.dropdown{
   background-color: rgba(255,255,255,.1);
 }
 
-
 /* ------------------------------------------------------- blog */
 
 
 #journal{
   background: url('bgpaper_small.png');
   text-align: center;
+}
+
+.journalentry{
+  width:70%;
+  margin: 0 auto;
+}
+
+.journalentry a{
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.journalentry a:hover{
+  color: #999;
+  text-decoration: none;
+}
+
+.journalentry img{
+  height: 30%;
+  width: 30%;
+  border: 4px solid #fff;
 }
 
 /* ------------------------------------------------------- FOOTER */
@@ -915,7 +1006,7 @@ padding: 0 0 0 0;
     position: relative;
     text-align: center;
     cursor: default;
-    background: #fff
+    background: #fff 
 }
 .thumbnail{
  display: none !important;
@@ -930,6 +1021,10 @@ padding: 0 0 0 0;
   padding: 50px 0;
   font-weight: 600;
   font-size: 16px;
+}
+
+.rightcol{
+  display: none;
 }
 
 .drawer{
@@ -959,7 +1054,7 @@ padding: 0 0 0 0;
 
 
 
-@media screen and (min-width: 681px) and (max-width: 1000px){
+@media screen and (min-width: 681px)and (max-width: 1000px){
 
 .albums h2 {
     font: normal 400 10px Courier;
@@ -973,21 +1068,21 @@ padding: 0 0 0 0;
 
 }
 
+
+
 .middlecol{
   margin-left: 10%;
 }
 
 
+
+
+
 .rightcol{
-    background-color: red;
-    display: none;
+  display: none;
 }
 
-
 }
-
-
-
 
 @media screen and (min-width: 681px)and (max-width: 780px){
 
@@ -1004,4 +1099,3 @@ padding: 0 0 0 0;
 }
 
 }
-
