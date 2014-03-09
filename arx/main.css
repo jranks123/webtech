@@ -271,7 +271,7 @@ li.icon a {
 }
 
 .sectionOverlay {
-  height:100%;
+
   width:100%;
   background: rgba(0,0,0,.77);
 }
@@ -624,65 +624,59 @@ a.dropdown{
 
 /* -------------------------------- LIVE */ 
 #live{
-  background: rgba(0,0,0,.85);
+  background: url('bgheader_black3.jpg') no-repeat top center;
+  background-attachment: fixed;  
+  width:100%;
+  color: #fff;
+  text-align: center;
 }
 
-article.post-9 .entry table td {
-  text-align: left !important;
+#tour {
+  padding:50px;
 }
-
-#bit-widget-0, #bit-widget-0 a, .bit-widget-container {
-  font-family: 'CourierRegular', "Courier New", Courier, monospace !important;
-  font-size: 17px !important;
-  line-height: 24px !important;
-
+.show:nth-child(even) {
+  background-color: rgba(0,0,0,.17);
+  margin-bottom: 1px;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-venue a, #bit-widget-0 a {
-  font-weight: normal !important;
-  font-family: 'CourierBold', "Courier New", Courier, monospace !important;
+.show:nth-child(odd) {
+  background-color: rgba(0,0,0,.4);
+  margin-bottom: 1px;
 }
-
-tr.bit-header, tr.bit-bottom, td.bit-rsvp, #bit-widget-0 th, td.bit-description-links {
-  display: none;
+.show .date {
+  float:left;
+  width: 130px;
+  padding: 50px 0 0;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: .7;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-date {
-  width: 13% !important;
+.show .venue {
+  float:left;
+  text-align: left;
+  opacity: .7;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 26px;
+  padding-top: 40px;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-venue {
-  width: 50% !important;
+.show .venue .city {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-venue a {
-  font-size: 19px !important;
-}
-
-#bit-widget-0 #bit-events tbody tr td.bit-location {
-  width: 30% !important;
-}
-
-article.post-9 a, article.post-9 a:visited {
-  color: #ffffff;
-  font: normal 400 18px/24px 'carolineregular', "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
-}
-
-article.post-9 a.bit-buy-tix {
-  display: block;
-  background-color: #222222;
-  color: #ffffff;
+.show .tickets {
+  float:right;
+  width: 130px;
+  background-color: rgba(23,23,23,.5);
   text-decoration: none;
-  margin: 10px 0;
-  padding: 5px 10px;
+  color: #fff;
+  display: block;
+  padding: 50px 0;
+  font-weight: 600;
+  font-size: 16px;
 }
-
-article.post-9 a.bit-buy-tix:hover {
-  background-color: #666666;
-}
-
-tr#bit-event-7132928 td.bit-date a:after {
-  content:" - May 31";
+.show .tickets:hover {
+  background-color: rgba(255,255,255,.1);
 }
 
 
@@ -803,6 +797,19 @@ tr#bit-event-7132928 td.bit-date a:after {
 }
 .thumbnail{
  display: none !important;
+}
+
+
+
+.show .tickets {
+  width: 100%;
+  background-color: rgba(23,23,23,.5);
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 50px 0;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 }
