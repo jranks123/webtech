@@ -10,7 +10,7 @@ body{
 }
 
 .nav .logo a{
-  background: url(img/logo_small_black.png) 0 0 no-repeat;
+  background: url(logo_small_black.png) 0 0 no-repeat;
   font-size:0;
   display: block;
   width:34px;
@@ -35,25 +35,25 @@ text-decoration:none;
 .nav ul li a:hover {text-decoration:none; color:#000;}
 
 li.icon a {
-  background: url(img/radkeySocialIcons.png) 0 -16px no-repeat;
+  background: url(socialicons.png) 0 -16px no-repeat;
 }
 
 li.icon a.twitter {
-  background: url(img/radkeySocialIcons.png) -16px -16px no-repeat;
+  background: url(socialicons.png) -16px -16px no-repeat;
 }
 
 li.icon a.instagram {
-  background: url(img/radkeySocialIcons.png) -32px -16px no-repeat;
+  background: url(socialicons.png) -32px -16px no-repeat;
 }
 
 li.icon a.facebook {
-  background: url(img/radkeySocialIcons.png) -0 -16px no-repeat;
+  background: url(socialicons.png) -0 -16px no-repeat;
 }
 
 li.icon a.youtube {
-  background: url(img/radkeySocialIcons.png) -64px -16px no-repeat;
+  background: url(socialicons.png) -64px -16px no-repeat;
 }
 
 li.icon a.soundcloud {
-  background: url(img/radkeySocialIcons.png) -80px -16px no-repeat;
+  background: url(socialicons.png) -80px -16px no-repeat;
 }
