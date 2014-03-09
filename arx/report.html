@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Web Tech Report</title>
+        <link rel="stylesheet" href="report.css"/>
+        <script src="jq.js"></script>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="text" id="top">
+                <h1>Web Tech: Arcade Fire</h1> 
+                <em>Jordan Fish and Jonathan Rankin</em>
+            </div>
+
+            <div class="text" id="basics">
+                <h1>Basics</h1>
+                <p>We have attempted to create a fluid one-page scrolling website that is engaging and easy to navigate for a fan of Arcade Fire. By combining HTML with CSS and JavaScript we were able to create a dynamic, responsive design that immerses the user while remaining easy to navigate at all times.</p> 
+
+                <p>Since Arcade Fire are an extremely large, image-orientated indie rock band it was important for our website to be aesthetically stunning and in matching with the band's visual branding without overloading a user with images and spoiling the user-experience.</p>
+
+                <p>In addition to creating the standalone website for the assignment, Arcade Fire requested we also skin a blog/news style website to act as both a temporary website during the development process of the main site and later retire to act as the blog section of the website. By rebranding and skinning a WordPress install for the blog section we allowed the band members to remain on a platform they are comfortable using, while still providing a website that is visually appealing to users, and in theme with the main website.</p>
+
+                <p>This blog is already live on the client's website <a href="http://arcadefire.com" alt="Arcade Fire Website">viewable here</a>. We will discuss the work and process for this in a later section of this report.</p>
+
+                <p>As a brief summary, during this project we have used: XHTML, CSS, JavaScript, jQuery, PHP (minor for WordPress implementation), Photoshop, Gimp, Inkscape and attempted animation with SVGs, JavaScript and CSS.              
+            </div>
+
+            <div class="text" id="nav">
+                <h1>Navigation</h1>
+                <p>One of the first key elements of our website was the navigation bar. We wanted to create a navigation interface that existed below the page's initial introduction header, but became 'sticky' to the page top before it is able to exit the screen. </p>
+                <p>After laying out the navigation bar in HTML and CSS, we used JavaScript and an additional CSS class to achieve this effect. We added a 'div' element to mark the point where the navigation bar should acquire or release it's 'sticky' property and used the distance to scroll to this div as the deciding factor as to whether or not the navigation bar should be pinned. </p>
+                <p>To pin the navigation we simply added a class named 'navbar-fixed' to the navbar which changed it's position to fixed at the top of the window, and the z-index to a high number allowing it to exist in front of all other elements of the website, freeing the navigation for use at all times.</p> 
+            </div>
+
+            <div class="text" id="navresponse">
+                <h1>Navigation's Responsive Design</h1>
+                <p>From the beginning of the assignment we attempted to keep our site's design responsive. This began with the navigation bar. When the screen size reached that of a tablet or mobile phone, we changed the style of our navigation bar to become more symmetrical and adopt the aesthetic of a phone app. See below:</p>
+                <div class="textimg"><img src="screenshot1.png" alt="Nav Responsive Screenshot" /></div>
+                <p>This symmetrical style makes better use of webpage real-estate and is intended to be more intuitive to a mobile user. In modifying the CSS of the navigation bar, particularly the bar's height, we also had to modify the scroll-points for the page as a larger nav bar with a high z-index would cover up content.</p>
+
+                <p>Additional cosmetics and minutia were taken into consideration with the navigation bar. Namely, when the navigation bar is resting over the site header it's opactiy is decreased for aesthetic purposes. However, when it is over the website's content the opacity increases as to make sure the layout is unconfusing to a user. Furthermore, opacity increases again in the mobile layouts to act as an app navigation bar and as less of a style element. Finally, since old versions of Internet Explorer struggle with rgba values we included a regular rgb fall-back css value for the navigation bar.</p>
+            </div>
+
+            <div class="text" id="gogimp">
+                <h1>Animated Header Logo (.svg)</h1>
+                <p>We created a large svg version of Arcade Fire's logo as decoration to exist above the main header image using Inkscape.</p>
+            </div>
+
+            <div class="text" id="goink">
+                <h1>Parallax Elements</h1>
+                <p>Another style choice we made during the website creation was the use of parallax background elements to provide a sense of depth for a user while scrolling. Having some experience with parallax headers prior to this assignment we were able to write this code from memory, though originally learning how to create these effects through multiple tutorials online.</p> 
+                <p>Our exact implementation requires, in CSS, the background of a div to be held in position: fixed and centered in the x-direction, then upon scroll jQuery (see implementation in parascroll.js) calculates the background-position in the y-direction that the image is modified, with respect to the scrolling rate.</p>
+            </div>
+
+            <div class="text" id="gojs">
+                <h1>Glide Scrolling</h1>
+                <p>To accompany the parallax backgrounds we implemented javascript 'glide scrolling', a technique to automatically scroll a user to a specific point in the page in a clean and quick way. We have both had experience implementing this previously, after learning how it works in previous web self-study, so for this assignment we implemented a slightly modified version of a basic smooth slider we had implemented months ago (<a href="http://css-tricks.com/snippets/jquery/smooth-scrolling/" alt="smooth scrolling">link</a>) and adapted the animation speed to suit for this project.</p>
+                <p>This glide scrolling is utilized by the navigation bar, the footer navigation bar, the 'return to top' image at the bottom of the page and each section's footer logo which acts as a 'move-to-next-section' button.</p>
+            </div>
+
+
+            <div class="text" id="goextra">
+                <h1>Music Hidden Drawer</h1>
+                <p>We have implemented a hidden drawer in CSS and JavaScript for the Music section of the website. By animating the div and increasing the height we are able to create space for content to to extend on the option a user interacted with. The content divs for each option are hidden off the side of the page with height=0, when an option is pressed the jQuery checks to see if a content div currently occupies the space. If not, the option's selected respective content animates in from the side. Otherwise, the content currently occupying this area leaves and is replaced by a new div. This was a custom jQuery implementation tailored for this site's content and was by far the most time consuming aspect of the project as attempting to keep this section's design responsive was a lengthy and troublesome task.</p>
+                <p>When this drawer opens it displays extended information about the album, as well as a mockup of a music player and some buy links. We created the mockup music player in Photoshop, basing it on the Spotify app's styling. By creating a template of music player on one layer, with a secondary layer below for album artwork we were able to quickly create multiple music player mockups with the same dimensions and aesthetic. However, in the server side coursework we aim to implement a real custom music player. </p>
+                <p>Additionally in this section, we created animated windows on hover of the album artworks. This is a largely modified implementation of <a href="http://tympanus.net/Tutorials/OriginalHoverEffects/index6.html" alt="CSS tutorial">this tutorial</a> which we used to learn more about CSS animation.
+            </div>
+
+            <div class="text" id="goextra">
+                <h1>'Loading...'</h1>
+                <p>We created a side-preloader that allows the site to have an air of professionalism while it loads. Instead of witnessing the images steadily load in front of a user, a loading catch page makes sure the site is not displayed until it is complete. Neither of us had experience with creating pre-loaders before, however we had attempted to implement lightboxes in a previous project and applying the same principle was able to create on quickly. </p>
+                <p>Using a fixed div that occupies the full height and width of the screen </p>
+            </div>
+
+
+            <div class="text" id="goextra">
+                <h1>Video Carousel</h1>
+                <p>Text here</p>
+            </div>
+
+            <div class="text" id="gallery">
+                <h1>Circular Image Gallery</h1>
+                <p>Text here</p>
+            </div>
+
+            <div class="text" id="themecss">
+                <h1>Day and Night CSS Themes</h1>
+                <p>Text here</p>
+            </div>
+
+            <div class="text" id="konami">
+                <h1>Konami Code Keyboard Easter Egg</h1>
+                <p>Text here</p>
+            </div>
+
+            <div class="text" id="svgpaint">
+                <h1>Interactive SVG Neon Bible</h1>
+                <p>Text here</p>
+            </div>
+
+            <div class="text" id="svgpaint">
+                <h1>WordPress</h1>
+                <p>Text here</p>
+            </div>
+
+
+        </div>
+    </body>
+
+</html>

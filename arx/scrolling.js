@@ -1,4 +1,4 @@
-
+        //glide scroll wooooooooo
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
                 || location.hostname == this.hostname) {
@@ -8,12 +8,13 @@
                    if (target.length) {
                      $('html,body').animate({
                          scrollTop: target.offset().top
-                    }, 1000);
+                    }, 800);
                     return false;
                 }
             }
         });
 
+        //sticky nav bar at scroll point
             $(document).ready(function() {
 
                 $(window).scroll(function () {
@@ -23,7 +24,8 @@
                     logoElementOffset = $('.logoMarker').offset().top,
                     distance = (elementOffset - scrollTop),
                     logoDistance = (logoElementOffset - scrollTop),
-                    proportion = distance/windowHeight;                    //secondaryDistance = (secondaryOffset - scrollTop);
+                    proportion = distance/windowHeight;                    
+                    //secondaryDistance = (secondaryOffset - scrollTop);
                     
                     //fix the navbar at the top unless you're on the starting 'splash'
                     if ($(window).width() > 680) {
@@ -60,34 +62,6 @@
 
             });
             });
-
-            var home = document.getElementById("home");
-            var audio = document.getElementById("audio");
-            var speed = 1.5;
-
-            window.onscroll = function()
-            {
-             var yOffset = window.pageYOffset;
-             home.style.backgroundPosition = "0px "+ (yOffset / speed) + "px";
-             //audio.style.backgroundPosition = "0px "+ (yOffset / speed) + "px"; //distance + (yoffset/speed)
-            }
-
-            //$(document).ready(function() {
-            //    $(window).scroll(function () {
-            //        var scrollToTop = $(window).scrollTop(),
-            //        eOffset         = $('.pmarker').offset().top,
-            //        paradistance    = (eOffset - scrollToTop);
-            //        
-            //       //fix the navbar at the top unless you're on the starting 'splash'
-            //       if ($(window).width() > 1) {
-            //            $("#audio").css("background-position", "0px " + (paradistance / 2) + "px");
-            //                });
-            //
-            //    });
-            //});
-
-
-            
 
             window.addEventListener('load', function() {}, false);
 

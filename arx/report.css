@@ -1,0 +1,41 @@
+.html, body{
+	height: 100%;
+	width: 100%;
+}
+
+.main {
+  width:100%;
+  text-align: center;
+  position: relative;
+  z-index: 1; 
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+}
+
+.text{
+  position: relative;
+  text-align: left;
+  width: 77%;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.text h1{
+	font-size: 18px; 
+}
+
+.text a{
+	color:#333;
+ 	text-decoration: none;
+}
+
+.text a:hover{
+	color: #aaa;
+}
+
+.textimg{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
