@@ -438,7 +438,8 @@ li.icon a {
   z-index: 3;
   text-align: center;
   margin: 0 auto;
-  height: 250px;
+  height: 100%;
+  364   margin-bottom: 5%;
 }
 
 .albums img {
@@ -569,6 +570,10 @@ li.icon a {
   z-index: 10;
 }
 
+.inline{
+  display: inline;
+}
+
 
 .hideB{
   height:0;
@@ -588,6 +593,14 @@ li.icon a {
   transform: translate3d(0,0,0);
 
 }
+
+.drawer.activeRight {
+   position:relative;
+   -webkit-transform: translate3d(3000px,0,0);
+   -moz-transform: translate3d(3000px,0,0);
+   -o-transform: translate3d(3000px,0,0);
+   transform: translate3d(0,0,0);
+  }
 
 .drawerContent{
     font-family: Arial, sans-serif;
@@ -618,11 +631,17 @@ a.dropdown{
 
 }
 
+.leftcol img{
+   height:100%;
+   max-height: 250px;
+ }
+
 .albumabout{
   padding:10px 0 0 20px;
   float:left;
   text-align: left;
   line-height: 24px;
+  font-size:small;
 }
 
 .spotify {
@@ -761,7 +780,7 @@ a.dropdown{
 
 /* -------------------------------- LIVE */ 
 #live{
-  background: url('bgheader_black3.jpg') no-repeat top center;
+  background: url('bgheader_black3.png') no-repeat top center;
   background-attachment: fixed;  
   width:100%;
   color: #fff;
@@ -987,8 +1006,11 @@ padding: 0 0 0 0;
     position: relative;
     text-align: center;
     cursor: default;
-    background: #fff 
+    background: #fff; 
 }
+
+
+
 .thumbnail{
  display: none !important;
 }
@@ -1004,6 +1026,13 @@ padding: 0 0 0 0;
   font-size: 16px;
 }
 
+.rightcol{
+   display: none;
+ }
+ 
+ .drawer{
+   display: none;
+       }
 
 
 }
@@ -1027,7 +1056,7 @@ padding: 0 0 0 0;
 
 
 
-@media screen and (min-width: 681px)and (max-width: 1000px){
+@media screen and (min-width: 680px)and (max-width: 1025px){
 
 .albums h2 {
     font: normal 400 10px Courier;
@@ -1055,4 +1084,17 @@ padding: 0 0 0 0;
 
 }
 
-}
+  .middlecol{
+   margin-left: 10%;
+ }
+ 
+ 
+ 
+ 
+ 
+ .rightcol{
+   display: none;
+ }
+ 
+ 
+ }
