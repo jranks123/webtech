@@ -452,10 +452,10 @@ li.icon a {
 
 .drawer {
   position:relative;
-  -webkit-transform: translate3d(-1000px,0 , 0);
-  -moz-transform: translate3d(-1000px, 0, 0);
-  -o-transform: translate3d(-1000px, 0, 0);
-  transform: translate3d(-1000px, 0, 0);
+  -webkit-transform: translate3d(-3000px,0 , 0);
+  -moz-transform: translate3d(-3000px, 0, 0);
+  -o-transform: translate3d(-3000px, 0, 0);
+  transform: translate3d(-3000px, 0, 0);
   -webkit-transition:-webkit-transform 0.25s linear;
   -moz-transition:-moz-transform 0.25s linear;
   -o-transition:-o-transform 0.25s linear;
@@ -473,22 +473,50 @@ li.icon a {
 }
 
 .drawerContent{
-  position:relative;
-  font-family: Arial, sans-serif;
-  color:#fff;
-  z-index: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    width: 80%;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+.leftcol, .rightcol {
+    width: 21%;
+    display:block;
+    float:left;
+    margin:0;
+}
+
+.rightcol {
+    float:right;
+}
+
+.middlecol {
+    width: 58%;
+    margin:0;
+    float:left;
 }
 
 a.dropdown{
 
 }
 
+.albumabout{
+  padding:10px 0 0 20px;
+  float:left;
+  text-align: left;
+  line-height: 24px;
+}
+
+
+
 .spotify {
+  float:left;
   position: relative;
   padding-bottom: 0;
   height: 250px;
-  width: 20%;
-  margin: 0 3% 6% 3%;
+  margin: 0 0 0 0;
+  display: block;
 }
 
 .spotify:nth-child(even) {  
