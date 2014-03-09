@@ -1,0 +1,59 @@
+
+body{
+  /*background:url(bgheader3.jpg) no-repeat center center fixed;*/
+  /*background-attachment: fixed;
+  background-position-x: center !important;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.nav .logo a{
+  background: url(logo_small_black.png) 0 0 no-repeat;
+  font-size:0;
+  display: block;
+  width:34px;
+  height:49px;
+  opacity:0.77;
+}
+
+.nav {
+  background: rgba(0,0,0,.75);
+}
+
+.nav ul li a {
+text-decoration:none; 
+ color:#000;
+}
+
+.nav li:hover {
+  background: rgba(250,239,116,.4);
+  /* background: rgba(174,0,0,.9);*/
+}
+
+.nav ul li a:hover {text-decoration:none; color:#000;}
+
+li.icon a {
+  background: url(socialicons.png) 0 -16px no-repeat;
+}
+
+li.icon a.twitter {
+  background: url(socialicons.png) -16px -16px no-repeat;
+}
+
+li.icon a.instagram {
+  background: url(socialicons.png) -32px -16px no-repeat;
+}
+
+li.icon a.facebook {
+  background: url(socialicons.png) -0 -16px no-repeat;
+}
+
+li.icon a.youtube {
+  background: url(socialicons.png) -64px -16px no-repeat;
+}
+
+li.icon a.soundcloud {
+  background: url(socialicons.png) -80px -16px no-repeat;
+}
