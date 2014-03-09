@@ -52,17 +52,62 @@
           var pauseButton = document.getElementById("rb");
 
           var pauseButton2 = document.getElementById("lb");
+
+          var pauseButton3 = document.getElementById("invisible1");
+
+          var pauseButton4 = document.getElementById("invisible2");
+
+
+          var playButton = document.getElementById("box");
+
+          playButton.addEventListener("click", function() {
+            if($('#video1').is(':visible')){
+              if(player1.getPlayerState()==1){
+                player1.pauseVideo();
+              }else{
+                player1.playVideo();
+              }
+            }else if($('#video2').is(':visible')){
+               if(player2.getPlayerState()==1){
+                player2.pauseVideo();
+              }else{
+                player2.playVideo();
+              }
+            }else if($('#video3').is(':visible')){
+              if(player3.getPlayerState()==1){
+                player3.pauseVideo();
+              }else{
+                player3.playVideo();
+              }
+            }
+
+            });
+
+
     pauseButton.addEventListener("click", function() {
-      player1.pauseVideo();
-      player2.pauseVideo();
-      player3.pauseVideo();
+      player1.stopVideo();
+      player2.stopVideo();
+      player3.stopVideo();
 
     });
 
     pauseButton2.addEventListener("click", function() {
-      player1.pauseVideo();
-      player2.pauseVideo();
-      player3.pauseVideo();
+      player1.stopVideo();
+      player2.stopVideo();
+      player3.stopVideo();
+
+    });
+
+    pauseButton3.addEventListener("click", function() {
+      player1.stopVideo();
+      player2.stopVideo();
+      player3.stopVideo();
+
+    });
+    pauseButton4.addEventListener("click", function() {
+      player1.stopVideo();
+      player2.stopVideo();
+      player3.stopVideo();
 
     });
     
