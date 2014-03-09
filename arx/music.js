@@ -1,5 +1,5 @@
 
-            var functionIsFree = 1;
+            
 
             function slider(album){ 
                 $('.drawer').addClass('inline');  
@@ -7,17 +7,18 @@
                 var empty = true;
                 allDraw.each(function() {
                     if($(this).is(":visible")){
+                      console.log("sds");
                       empty = false;
                     }
                 });
                 if(empty){
+                    console.log("got here w");
                     var div_height = $('#audio').height() + 450;
                     $('#audio').animate({
                     height: div_height}, 200); 
                     $(album).toggleClass('hideB'); 
                     window.setTimeout(function(){ $(album).toggleClass('active');},400);
                            
-
 
                 }else if($(album).is(':visible')){
                    var div_height = $('#audio').height() - 450;
@@ -30,7 +31,9 @@
                   $(album).toggleClass('hideB'); 
                   
                   allDraw.not(album).each(function() {
+                    console.log("got here");
                     if($(this).is(":visible")){
+                        console.log("made it into the loop");
                          $(this).toggleClass('active');
                          $(this).toggleClass('hideB');
                     }

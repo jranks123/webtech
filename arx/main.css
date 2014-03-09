@@ -570,7 +570,7 @@ li.icon a {
 }
 
 .inline{
-  display:inline;
+  display:inline-block;
 }
 
 
