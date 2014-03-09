@@ -18,7 +18,6 @@
        <script>
         $(function() {
             $('.drawer').addClass('hideB');
-
           var easter_egg = new Konami('neonbible.html');
 
         });
@@ -27,9 +26,15 @@
 
 
     <body id="main">
+        <div id="preloader">
+            <div id="rotatinglogo"><img class="spin" src="logo_small_white.png">
+            </div>
+        </div>
+
+
         <!-- splash image/top of site -->
         <div class="container" id="home">
-            <object id="logosvg" class="emb images" data="img/logo_black.svg" type="image/svg+xml"> </object>
+            <object id="logosvg" class="emb images" data="logo_black.svg" type="image/svg+xml"> </object>
               <div class="logoMarker"></div>
         </div>
         <!-- end splash area -->
@@ -60,10 +65,57 @@
         <!-- start of 'about the band' section -->
         <div class="container" id="band">
           <div class="sectionHeader"><img src="band_header.png" /></div>
-          <div class="sectionContent">
-           <p>Band text here.</p>
-           <p>Band text here.</p>
-           <p>Band text here.</p>
+            <div class="bandbio">
+                <div class="photochange">
+                    <img src="band1_circle_small.png" alt="Arcade Fire" />
+                    <img src="band2_circle_small.png"> 
+                    <img src="band3_circle_small.png">
+                    <img src="band5_circle_small.png">  
+                    <img src="band4_circle_small.png">                
+                </div>
+
+                <script>
+                var $switchimg = $('.photochange'); 
+                var $next = 'img'; 
+                var $change_duration = 1000; 
+                var $pause = 4000;
+
+                function swap(){
+                  return $switchimg.find($next);
+                }
+
+                swap().fadeOut();
+
+                // set active classes
+                swap().first().addClass('active');
+                swap().first().fadeIn($change_duration);
+
+                // auto scroll 
+                $interval = setInterval(
+                    function(){
+                      var $i = $switchimg.find($next + '.active').index();
+                    
+                      swap().eq($i).removeClass('active');
+                      swap().eq($i).fadeOut($change_duration);
+                    
+                      if (swap().length == $i + 1) $i = -1; // loop to start
+                    
+                      swap().eq($i + 1).fadeIn($change_duration);
+                      swap().eq($i + 1).addClass('active');
+                    }
+                    , $change_duration +  $pause
+                );
+                </script>
+
+
+                <p>Arcade Fire is an indie rock band based in Montreal, Quebec, Canada, consisting of husband and wife Win Butler and Régine Chassagne, along with Win's brother Will Butler, Richard Reed Parry, Tim Kingsbury and Jeremy Gara. The band's current touring line-up also includes former core member Sarah Neufeld, frequent collaborator Owen Pallett, and two additional percussionists, Diol Edmond and Tiwill Duprate.</p>
+
+<p>Founded in 2001 by friends and classmates Win Butler and Josh Deu, the band came to prominence in 2004 with the release of their critically acclaimed debut album Funeral, and has won numerous awards, including the 2011 Grammy for Album of the Year (they hold the distinction of being the only musical group to have won their first and only Grammy in that category), the 2011 Juno Award for Album of the Year, and the 2011 Brit Award for Best International Album for their third studio album, The Suburbs, released in 2010 to critical acclaim and commercial success.</p> 
+
+<p>In earlier years, they won the 2008 Meteor Music Award for Best International Album and the 2008 Juno Award for Alternative Album of the Year for their second studio album, Neon Bible. They also received nominations for the Best Alternative Music Album Grammy for all three of their studio albums. The band's work has also been twice named as a short list nominee for the Polaris Music Prize in 2007 for Neon Bible and in 2011 for The Suburbs, winning the award for The Suburbs. In 2013, Arcade Fire released their fourth album Reflektor and scored the feature film Her, for which William Butler (current member of the band) and Owen Pallett were nominated for Best Original Score at the 86th Academy Awards.</p> </span>
+
+<div class="sectionfooter"><a href="#audio"><img src="logo_small_black.png" /></a></div>
+            </div>
         </div>
           <div class="clear"></div>
         </div>
@@ -80,7 +132,7 @@
                     <div class="albums">
 
                         <div class="album">  
-                         <img src="http://arcadefire.com/reflektorpreorder/assets/images/reflektor.jpg" />  
+                         <img src="reflektor.png" />  
                          <div class="details">  
                          <h2>Reflektor</h2>  
                              <a href="#audio" class="info" id="reflektor">discover</a>  
@@ -89,7 +141,7 @@
 
 
                         <div class="album">  
-                         <img src="http://arcadefire.com/reflektorpreorder/assets/images/the-suburbs.jpg" />  
+                         <img src="the-suburbs.png" />  
                          <div class="details">  
                          <h2>The Suburbs</h2>  
                              <a href="#audio" class="info" id="thesuburbs">discover</a>  
@@ -98,7 +150,7 @@
 
 
                         <div class="album">  
-                         <img src="http://arcadefire.com/reflektorpreorder/assets/images/neon-bible.jpg" />  
+                         <img src="neon-bible.png" />  
                          <div class="details">  
                          <h2>Neon Bible</h2>  
                              <a href="#audio" class="info" id="neonbib">discover</a>  
@@ -107,7 +159,7 @@
 
 
                         <div class="album">  
-                         <img src="http://arcadefire.com/reflektorpreorder/assets/images/funeral.jpg" />  
+                         <img src="funeral.png" />  
                          <div class="details">  
                          <h2>Funeral</h2>  
                              <a href="#audio" class="info" id="funeralalb">discover</a>  
@@ -116,7 +168,7 @@
 
 
                         <div class="album">  
-                         <img src="http://arcadefire.com/reflektorpreorder/assets/images/arcade-fire-ep.jpg" />  
+                         <img src="arcade-fire-ep.png" />  
                          <div class="details">  
                          <h2>Arcade Fire EP</h2>  
                           <a href="#audio" class="info" id="ep">discover</a>  
@@ -235,7 +287,7 @@
 
 
 
-
+                    <div class="sectionfooter"><a href="#video"><img src="logo_small_white.png" /></a></div>
                     </div>
                     </div>
             </div>
@@ -281,7 +333,7 @@
 
   <script src="video2.js"></script>
         </div>
-
+    <div class="sectionfooter"><a href="#live"><img src="logo_small_black.png" /></a></div>
       </div>
   </div>
 
@@ -326,6 +378,8 @@
 
 
                 </div>
+
+                <div class="sectionfooter"><a href="#journal"><img src="logo_small_white.png" /></a></div>
             </div>
         </div>
         <!-- end live dates -->
@@ -337,9 +391,18 @@
             <div class="sectionHeader"><img src="blog_header.png" />
             </div>
             <div class="sectionContent">
-                     <p>Journal text here.</p>
-                    <p>Band text here.</p>
-                    <p>Band text here.</p>
+                <div class="journalentry">
+                    <p><strong>The Oscars!</strong></p>
+                    <p>Will and I just got back from a night at The Oscars with our mate Spike. We soundtracked his film 'Her' and he won this fancy award for it. I used 
+                        the award to stake him, turns out he is not a vampire after all. Only two weeks until out US tour now. Can't wait to see you all on the road again. Sorry this is a short update. Here's a pic of me killing Spike for now.</p>
+                    <p><a href="http://instagram.com/p/lGEKErIJTh/" alt="Arcade Fire's Instagram"><img src="journal1.png" alt="At the Oscars with Spike!" /></a></p>
+                    <p>Love Win & Will x<br />
+                        Posted at: 13.20 on 14/7 by Win Butler</p>
+                    <p></p>
+                    <p><a href="http://arcadefire.com/site/">« view more updates »</a></p>
+                </div>
+
+            <div class="sectionfooter"><a href="#home" alt="Return to Top"><img src="logo_small_black.png" /></a></div>
             </div>
         </div>
         <!-- end blog -->
@@ -348,7 +411,7 @@
 
         <!-- footer -->
             <div class="container" id="footer">
-              <div class="nav" id="footernav">
+                <div class="nav" id="footernav">
                   <ul>
                     <li class="inPage Hide FooterLink"><a href="#band" title="Band">About</a></li>
                     <li class="inPage Hide FooterLink"><a href="#audio" title="Audio">Music</a></li>
@@ -358,6 +421,7 @@
                   </ul>
                   <div class="clear"></div>
                 </div>
+
                 <div id="socialfooter">
                     <a href="https://www.facebook.com/arcadefire"><img src="http://arcadefire.com/site/wp-content/uploads/2014/03/facebook.png" width="16" height="16" alt="Facebook" title="Facebook" border="0" /></a>
                     <a href="https://twitter.com/arcadefire"><img src="http://arcadefire.com/site/wp-content/uploads/2014/03/twitter.png" width="16" height="16" alt="Twitter" title="Twitter" border="0" /></a>
@@ -376,9 +440,9 @@
         <!-- end footer -->
 
   <script src="scrolling.js"></script>
+  <script src="parascroll.js"></script>
   <script src="music.js"></script>
-    <script src="parascroll.js"></script>
-
+  <script src="preload.js"></script>
             </div>
 
     </body>
