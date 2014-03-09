@@ -46,6 +46,11 @@ body{
   overflow: hidden;
 }
 
+/* IE FIX FOR IMAGE BORDERS */
+.borderless {
+  border: none;
+}
+
 #preloader{
   position: fixed;
   top:0;
