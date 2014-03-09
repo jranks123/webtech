@@ -70,6 +70,9 @@ body.lightboxed {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center !important;
+  background-position-y: -200px;
   text-align: center;
 }
 
@@ -287,7 +290,7 @@ li.icon a {
 /* -------------------------------- ABOUT */ 
 
 #band {
-  background: #fff;
+  background: url('bgfeather_small.png');
   width:100%;
 
   text-align: center;
@@ -327,14 +330,14 @@ li.icon a {
 
 
 #audio {
-  background: url('bgheader2.png') no-repeat ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 1;
- display: inline-block;
- width: 100%;
+  background: url('bgheader2.png') no-repeat top center;
+
+   z-index: 0;
+   display: inline-block;
+   width: 100%;
+   background-attachment: fixed; 
+
+
 
 
   /*min-height: 400px;*/
@@ -472,10 +475,10 @@ li.icon a {
 
 .drawer {
   position:relative;
-  -webkit-transform: translate3d(-1000px,0 , 0);
-  -moz-transform: translate3d(-1000px, 0, 0);
-  -o-transform: translate3d(-1000px, 0, 0);
-  transform: translate3d(-1000px, 0, 0);
+  -webkit-transform: translate3d(-3000px,0 , 0);
+  -moz-transform: translate3d(-3000px, 0, 0);
+  -o-transform: translate3d(-3000px, 0, 0);
+  transform: translate3d(-3000px, 0, 0);
   -webkit-transition:-webkit-transform 0.25s linear;
   -moz-transition:-moz-transform 0.25s linear;
   -o-transition:-o-transform 0.25s linear;
@@ -504,14 +507,39 @@ li.icon a {
 }
 
 .drawerContent{
-  position:relative;
-  font-family: Arial, sans-serif;
-  color:#fff;
-  z-index: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    width: 80%;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+.leftcol, .rightcol {
+    width: 21%;
+    display:block;
+    float:left;
+    margin:0;
+}
+
+.rightcol {
+    float:right;
+}
+
+.middlecol {
+    width: 58%;
+    margin:0;
+    float:left;
 }
 
 a.dropdown{
 
+}
+
+.albumabout{
+  padding:10px 0 0 20px;
+  float:left;
+  text-align: left;
+  line-height: 24px;
 }
 
 .spotify {
@@ -555,11 +583,11 @@ a.dropdown{
  }
 
 
-.video{
-  width:100%;
+#video{
+  background: url('bgfeather_small.png');
   text-align: center;
-  display: inline;
 }
+
 
 
 .embeddedVideo{
@@ -651,65 +679,59 @@ a.dropdown{
 
 /* -------------------------------- LIVE */ 
 #live{
-  background: rgba(0,0,0,.85);
+  background: url('bgheader_black3.jpg') no-repeat top center;
+  background-attachment: fixed;  
+  width:100%;
+  color: #fff;
+  text-align: center;
 }
 
-article.post-9 .entry table td {
-  text-align: left !important;
+#tour {
+  padding:50px;
 }
-
-#bit-widget-0, #bit-widget-0 a, .bit-widget-container {
-  font-family: 'CourierRegular', "Courier New", Courier, monospace !important;
-  font-size: 17px !important;
-  line-height: 24px !important;
-
+.show:nth-child(even) {
+  background-color: rgba(0,0,0,.17);
+  margin-bottom: 1px;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-venue a, #bit-widget-0 a {
-  font-weight: normal !important;
-  font-family: 'CourierBold', "Courier New", Courier, monospace !important;
+.show:nth-child(odd) {
+  background-color: rgba(0,0,0,.4);
+  margin-bottom: 1px;
 }
-
-tr.bit-header, tr.bit-bottom, td.bit-rsvp, #bit-widget-0 th, td.bit-description-links {
-  display: none;
+.show .date {
+  float:left;
+  width: 130px;
+  padding: 50px 0 0;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: .7;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-date {
-  width: 13% !important;
+.show .venue {
+  float:left;
+  text-align: left;
+  opacity: .7;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 26px;
+  padding-top: 40px;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-venue {
-  width: 50% !important;
+.show .venue .city {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
 }
-
-#bit-widget-0 #bit-events tbody tr td.bit-venue a {
-  font-size: 19px !important;
-}
-
-#bit-widget-0 #bit-events tbody tr td.bit-location {
-  width: 30% !important;
-}
-
-article.post-9 a, article.post-9 a:visited {
-  color: #ffffff;
-  font: normal 400 18px/24px 'carolineregular', "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
-}
-
-article.post-9 a.bit-buy-tix {
-  display: block;
-  background-color: #222222;
-  color: #ffffff;
+.show .tickets {
+  float:right;
+  width: 130px;
+  background-color: rgba(23,23,23,.5);
   text-decoration: none;
-  margin: 10px 0;
-  padding: 5px 10px;
+  color: #fff;
+  display: block;
+  padding: 50px 0;
+  font-weight: 600;
+  font-size: 16px;
 }
-
-article.post-9 a.bit-buy-tix:hover {
-  background-color: #666666;
-}
-
-tr#bit-event-7132928 td.bit-date a:after {
-  content:" - May 31";
+.show .tickets:hover {
+  background-color: rgba(255,255,255,.1);
 }
 
 
@@ -831,6 +853,19 @@ tr#bit-event-7132928 td.bit-date a:after {
 .thumbnail{
  display: none !important;
 }
+
+.show .tickets {
+  width: 100%;
+  background-color: rgba(23,23,23,.5);
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 50px 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
 
 }
 
