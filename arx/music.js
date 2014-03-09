@@ -1,34 +1,91 @@
 
             var functionIsFree = 1;
 
-            
-            $('#reflektor').click(function(e){
-                    if(e.handled !== true){
-
-
-                    if($('.drawer').is(':hidden')){
-                        var div_height = $('#audio').height() + 400;
-
-                        $('#audio').animate({
-                        height: div_height}, 200); 
-                        $('#slidereflektor').toggleClass('hideB'); 
-
-                        window.setTimeout(function(){ $('.drawer').toggleClass('active');},400);
+            function slider(album){ 
+                var allDraw = $('.drawer');
+                var empty = true;
+                allDraw.each(function() {
+                    if($(this).is(":visible")){
+                      empty = false;
                     }
-                    else if($('#slidereflektor').is(':visible')){
-                         var div_height = $('#audio').height() - 400;
-                         $('#slidereflektor').toggleClass('active');
-                         $('#slidereflektor').toggleClass('hideB');
+                });
+                if(empty){
+                    var div_height = $('#audio').height() + 400;
+                    $('#audio').animate({
+                    height: div_height}, 200); 
+                    $(album).toggleClass('hideB'); 
+                    window.setTimeout(function(){ $(album).toggleClass('active');},400);
+                }else if($(album).is(':visible')){
+                   var div_height = $('#audio').height() - 400;
+                         $(album).toggleClass('active');
+                         $(album).toggleClass('hideB');
                         $('#audio').animate({
                             height: div_height}, 200);
-                        }
+                } else{
+                  $(album).toggleClass('hideB'); 
+                       
+                  allDraw.not(album).each(function() {
+                    if($(this).is(":visible")){
+                         $(this).toggleClass('active');
+                         $(this).toggleClass('hideB');
+                    }
+                    });
+                     $(album).toggleClass('active'); 
 
-
-
-                      e.preventDefault(); 
                 }
-                e.handled = true;
-            });     
+            }
+
+          /*      
+                var div_height = $('#audio').height() + 400;
+                    $(album).toggleClass('hideB');    
+                    $(".drawer").not(album).css( "height", "0");
+                     $(".drawer").not(album).css( "display", "none"); 
+
+                }
+
+
+            }
+                /*else if($('#slidereflektor').is(':visible')){
+                     var div_height = $('#audio').height() - 400;
+                     $('#slidereflektor').toggleClass('active');
+                     $('#slidereflektor').toggleClass('hideB');
+                    $('#audio').animate({
+                        height: div_height}, 200);
+                    }*/
+
+
+
+
+
+
+
+
+            $('#reflektor').click(function(e){
+                slider('#slidereflektor');
+            });
+
+            $('#thesuburbs').click(function(e){
+                slider('#slidesuburbs');
+            });
+
+            $('#neonbib').click(function(e){
+                slider('#slideneonbible');
+            });
+
+            $('#funeralalb').click(function(e){
+                slider("#slidefuneral");
+            });
+
+          $('#ep').click(function(e){
+                slider('#slideep');
+            });
+                  
+
+
+
+
+
+          
 
 
 
@@ -43,18 +100,16 @@
 
 
 
-
-
-            $(".info").click((function() {
+        /*    $(".info").click((function() {
                 var i = 0;
                 return function() {
-                  /*  if($('#audio').height() == $(window).height()){
+                   if($('#audio').height() == $(window).height()){
                          $('#audio').animate({
                        height: '60%'}, 1);
                     }else{
                     $('#audio').animate({
                        height: '100%'}, 2);
-                }*/
+                }
 
 
                      var div_height = $('#audio').height();
@@ -93,7 +148,7 @@ console.log($('#audio').height())
 
                 }
             })());
-
+*/
 
        /*     window.onresize = function() {
 
