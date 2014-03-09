@@ -46,11 +46,6 @@ body{
   overflow: hidden;
 }
 
-/* IE FIX FOR IMAGE BORDERS */
-.borderless {
-  border: none;
-}
-
 #preloader{
   position: fixed;
   top:0;
@@ -99,6 +94,14 @@ body{
    -webkit-transform: rotate(360deg); transform:rotate(360deg); 
    } 
  }
+
+ .mirror {
+    display:block; 
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
 
 p {
   margin-bottom: 0px;
@@ -517,47 +520,6 @@ li.icon a {
 
 
 }
-.album a.info:hover {
-    color: #bbb;
-}
-
-.album img { 
-    transition: all 0.2s linear;
-}
-
-.album h2 {
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-}
-.album p { 
-    transform: translateY(100px);
-    opacity: 0;
-    transition: all 0.2s linear;
-}
-.album a.info{
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-}
-
-.album:hover img { 
-    transform: scale(1.1);
-} 
-.album:hover .details { 
-    opacity: 1;
-}
-.album:hover h2,
-.album:hover p,
-.album:hover a.info {
-    opacity: 1;
-    transform: translateY(0px);
-}
-.album:hover p {
-    transition-delay: 0.1s;
-}
-.album:hover a.info {
-    transition-delay: 0.2s;
-}
 
 
 .drawer {
@@ -694,6 +656,11 @@ a.dropdown{
   text-align: center;
 }
 
+
+
+#afterlifeTitle, #suburbsTitle{
+    display: none;
+}
 
 
 .embeddedVideo{
@@ -925,6 +892,11 @@ padding: 0 0 0 0;
 
 @media screen and (max-width: 680px){
 
+
+  .embeddedVideo{
+    width:80%;
+  }
+
    #homeAbout{
       margin-left: 0px;
     }
@@ -941,6 +913,10 @@ padding: 0 0 0 0;
 
 #footernav{
   height: 50px;
+}
+
+.audio{
+  height:1300px;
 }
 
 .navbar-fixed {
@@ -965,15 +941,20 @@ padding: 0 0 0 0;
 
 }
 
+.nav ul{ /*ADDED THIS IN*/
+  margin-top: -14px;
+}
+
+
 
 
 .nav .logo{
-  margin-left: 45%;
-  margin-right: 45%;
+  margin: 0 auto;
   margin-bottom: 10px;
-  float: left;
+  bottom:11px;
   position: relative;
   opacity: 1;
+  display: inline-block;
 }
 
 
@@ -1004,7 +985,7 @@ padding: 0 0 0 0;
 
 .album {
     display:block;
-    width: 50%;
+    width: 200px;
     margin: 0 auto;
     border: 10px solid #fff;
     position: relative;
@@ -1100,6 +1081,53 @@ padding: 0 0 0 0;
     padding: 7px 14px;
 
 
+}
+
+}
+
+
+
+@media screen and (min-width: 681px){
+.album a.info:hover {
+    color: #bbb;
+}
+
+.album img { 
+    transition: all 0.2s linear;
+}
+
+.album h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.album p { 
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.album a.info{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.album:hover img { 
+    transform: scale(1.1);
+} 
+.album:hover .details { 
+    opacity: 1;
+}
+.album:hover h2,
+.album:hover p,
+.album:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.album:hover p {
+    transition-delay: 0.1s;
+}
+.album:hover a.info {
+    transition-delay: 0.2s;
 }
 
 }
