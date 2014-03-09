@@ -1,8 +1,6 @@
 var win=$(window),
 head=$("#home"),
-about=$("#band"),
 audio=$("#audio"),
-video=$("#video"),
 live=$("#live");
 
 
