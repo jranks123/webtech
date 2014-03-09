@@ -11,7 +11,7 @@
                     }
                 });
                 if(empty){
-                    var div_height = $('#audio').height() + 400;
+                    var div_height = $('#audio').height() + 450;
                     $('#audio').animate({
                     height: div_height}, 200); 
                     $(album).toggleClass('hideB'); 
@@ -20,7 +20,7 @@
 
 
                 }else if($(album).is(':visible')){
-                   var div_height = $('#audio').height() - 400;
+                   var div_height = $('#audio').height() - 450;
                          $(album).toggleClass('active');
                          $(album).toggleClass('hideB');
                         $('#audio').animate({
