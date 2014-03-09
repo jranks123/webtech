@@ -489,6 +489,8 @@ li.icon a {
   -o-transition:-o-transform 0.5s linear;
   transition:transform 0.5s linear;
   z-index: 10;
+  display: inline;
+  text-align: center;
 }
 
 
@@ -514,27 +516,35 @@ li.icon a {
 .drawerContent{
     font-family: Arial, sans-serif;
     color: #fff;
-    width: 80%;
+    width: 100%;
     overflow:hidden;
     margin: 0 auto;
+    display: inline-block;
+      text-align: center;
 }
 
 .leftcol, .rightcol {
-    width: 21%;
-    display:block;
-    float:left;
-    margin:0;
+    width: 18%;
+
+
+}
+
+.cont{
+        margin:0 auto;
+         display:inline-block;
+         vertical-align: top;
 }
 
 .rightcol {
-    float:right;
+    
 }
 
 .middlecol {
-    width: 58%;
-    margin:0;
-    float:left;
+    width: 50%;
+
+
 }
+
 
 a.dropdown{
 
@@ -542,8 +552,6 @@ a.dropdown{
 
 .albumabout{
   padding:10px 0 0 20px;
-  float:left;
-  text-align: left;
   line-height: 24px;
 }
 
