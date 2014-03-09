@@ -373,7 +373,6 @@ li.icon a {
   margin: 5px 5px 5px 5px;
   z-index: 3;
 }
-
 .album {
     max-width: 200px;
     max-height: 200px;
@@ -382,6 +381,7 @@ li.icon a {
     margin: 10px;
     border: 10px solid #fff;
     overflow: hidden;
+
     position: relative;
     text-align: center;
     cursor: default;
@@ -930,13 +930,12 @@ padding: 0 0 0 0;
   font-weight: 600;
   font-size: 16px;
 }
-.rightcol{
-  display: none;
-}
 
 .drawer{
   display: none;
 }
+
+
 
 }
 
@@ -959,7 +958,7 @@ padding: 0 0 0 0;
 
 
 
-@media screen and (min-width: 680px)and (max-width: 1025px){
+@media screen and (min-width: 681px) and (max-width: 1000px){
 
 .albums h2 {
     font: normal 400 10px Courier;
@@ -978,15 +977,15 @@ padding: 0 0 0 0;
 }
 
 
-
-
-
 .rightcol{
-  display: none;
+    background-color: red;
+    display: none;
 }
 
 
 }
+
+
 
 
 @media screen and (min-width: 681px)and (max-width: 780px){
