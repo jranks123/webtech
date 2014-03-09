@@ -81,6 +81,9 @@ body.lightboxed {
   text-align: center;
 }
 
+
+
+
 /*-------------------------LOGO  -*/
 
 #logosvg{
@@ -170,7 +173,7 @@ fill:green;
 }
 
 .nav .logo a{
-  background: url(img/logo_small_white.png) 0 0 no-repeat;
+  background: url(logo_small_white.png) 0 0 no-repeat;
   font-size:0;
   display: block;
   width:34px;
@@ -283,8 +286,11 @@ li.icon a {
 }
 
 .sectionContent {
+  height: 100%;
+  width: 100%;
   padding: 10px 0 0 0;
   text-align: center;
+  margin: 0 auto;
 }
 
 .rel{
@@ -297,30 +303,51 @@ li.icon a {
 #band {
   background: url('bgfeather_small.png');
   width:100%;
-
   text-align: center;
   position: relative;
   z-index: 1; 
   font-family: Arial, sans-serif;
+  margin: 0 auto;
 }
 
-#band #bandp {
-  width:100%;
-  max-width: 400px;
-}
-
-#band h2 {
-  padding-top: 50px;
-}
-
-#band .bio {
+.bandbio {
   color: #777;
-  width: 45%;
-  padding:0 50px 50px 0;
-  float:right;
-  text-align: justify;
+  position: relative;
+  width: 77%;
+  display: inline-block;
   font-size: 14px;
   line-height: 28px;
+}
+
+.bandbio p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.bandbio img {
+    display: inline-block;
+    margin: 10px auto 0;
+}
+
+.photochange {
+  margin: 0 auto;
+  width: 260px; 
+  height: 260px; 
+  position: relative;
+  overflow: hidden;
+}
+
+.photochange img {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+.sectionfooter {
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 /* -------------------------------- AUDIO */ 
