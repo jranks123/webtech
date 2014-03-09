@@ -46,6 +46,14 @@ body{
 }
 }
 
+
+
+p {
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+}
+
+
 body.lightboxed {
   height: 100%;
   overflow: hidden;
@@ -65,11 +73,8 @@ body.lightboxed {
 /* home is the top 'splash' section of the website */
 #home {
   height:100%;
+  width:100%;
   background: url('bgheader1.png') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   background-attachment: fixed;
   background-position-x: center !important;
   background-position-y: -200px;
@@ -479,10 +484,10 @@ li.icon a {
   -moz-transform: translate3d(-3000px, 0, 0);
   -o-transform: translate3d(-3000px, 0, 0);
   transform: translate3d(-3000px, 0, 0);
-  -webkit-transition:-webkit-transform 0.25s linear;
-  -moz-transition:-moz-transform 0.25s linear;
-  -o-transition:-o-transform 0.25s linear;
-  transition:transform 0.25s linear;
+  -webkit-transition:-webkit-transform 0.5s linear;
+  -moz-transition:-moz-transform 0.5s linear;
+  -o-transition:-o-transform 0.5s linear;
+  transition:transform 0.5s linear;
   z-index: 10;
 }
 
@@ -584,7 +589,7 @@ a.dropdown{
 
 
 #video{
-  background: url('bgfeather_small.png');
+  background: url('bgsnowpng');
   text-align: center;
 }
 
@@ -735,10 +740,39 @@ a.dropdown{
 }
 
 
+/* ------------------------------------------------------- blog */
+
+
+#journal{
+  background: url('bgpaper_small.png');
+  text-align: center;
+}
+
 /* ------------------------------------------------------- FOOTER */
 
 #footer{
   background: #232323;
+}
+
+#footernav{
+  background: #232323;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+#footernav ul{
+padding: 0 0 0 0;
+}
+
+.nav ul .FooterLink{
+  float:none;
+  display: inline;
+}
+
+#footernav li:hover {
+  background: rgba(255,255,255,0);
+  /* background: rgba(174,0,0,.9);*/
 }
 
 #socialfooter {
@@ -746,7 +780,8 @@ a.dropdown{
   font-size: 18px;
   line-height: 16px;
   text-align: center;
-  margin: 25px 0 50px;
+  margin: 0 0 50px 0;
+  padding: 100px 0 0 0;
 }
 
 #socialfooter a img {
@@ -758,6 +793,7 @@ a.dropdown{
   text-transform: uppercase;
   font-size: 12px;
   color: #FFF;
+  padding-bottom: 20px;
 }
 
 
@@ -779,6 +815,10 @@ a.dropdown{
   text-align: center;
   height: 91px;
   margin-top: -90px;
+}
+
+#footernav{
+  height: 50px;
 }
 
 .navbar-fixed {
@@ -848,7 +888,7 @@ a.dropdown{
     position: relative;
     text-align: center;
     cursor: default;
-    background: #fff 
+    background: #fff
 }
 .thumbnail{
  display: none !important;
@@ -916,12 +956,5 @@ a.dropdown{
 
 }
 
-@media screen and (min-width: 1000px)and (max-width: 2000px){
-
-.audio{
-  min-height: 400px;
 }
 
-}
-
-}
