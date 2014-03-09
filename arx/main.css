@@ -31,7 +31,7 @@ html {
 
 /*make background 'cover style' for various OS*/
 body{
-  /*background:url(bgheader1.jpg) no-repeat center center fixed;
+  /*background:url(bgheader1.pngbg) no-repeat center center fixed;
   background-attachment: fixed;
   background-position-x: center !important;*/
   -webkit-background-size: cover;
@@ -65,7 +65,7 @@ body.lightboxed {
 /* home is the top 'splash' section of the website */
 #home {
   height:100%;
-  background: url('bgheader1.jpg') no-repeat;
+  background: url('bgheader1.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -327,9 +327,9 @@ li.icon a {
 
 
 #audio {
-  background: url('bgheader2.jpg') no-repeat ;
+  background: url('bgheader2.png') no-repeat ;
   -webkit-background-size: cover;
-  -moz-background-sizeSECTcover;
+  -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   z-index: 1;
@@ -481,7 +481,6 @@ li.icon a {
   -o-transition:-o-transform 0.25s linear;
   transition:transform 0.25s linear;
   z-index: 10;
-
 }
 
 
@@ -501,8 +500,7 @@ li.icon a {
   -moz-transform: translate3d(0,0,0);
   -o-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  z-index: 10;
-  display:block;
+
 }
 
 .drawerContent{
