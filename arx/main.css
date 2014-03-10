@@ -140,8 +140,6 @@ body.lightboxed {
   height: 100%;
   width: 100%;
   background-attachment: fixed;
-  background-position-x: center !important;
-  background-position-y: -200px;
   background-position: center -200px; /*bug fix for firefox*/
   text-align: center;
 }
@@ -234,6 +232,7 @@ fill:green;
   width: auto;
   cursor: pointer;
   opacity: .8;
+  
 }
 
 .nav .logo a{

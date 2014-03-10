@@ -41,21 +41,24 @@
         <!-- marker div for the scroll bar -->
         <div class="marker"></div>
 
-<!--[if !IE]><!-->
-        <div class="container" id="paint">
-            <div class="sectionHeader">
-            </div>
-            <div class="sectionContent">
-                <p> Neon Bible Interactive Album Cover</p>
-               <div id="color"> <img id="interventionsv" class="svg" src="intervention.svg" alt="Neon Bible"/></div>
-               <p class="text"> Click on different parts of the image above to create your own Neon Bible!</p> 
-            </div>
-        </div>
+            <!--[if !IE]><!-->non-IE
+                    <div class="container" id="paint">
+                        <div class="sectionHeader">
+                        </div>
+                        <div class="sectionContent">
+                            <p> Neon Bible Interactive Album Cover</p>
+                           <div id="color"> <img id="interventionsv" class="svg" src="intervention.svg" alt="Neon Bible"/></div>
+                           <p class="text"> Click on different parts of the image above to create your own Neon Bible!</p> 
+                        </div>
+                    </div>
 
-        <script src="svgimg.js"></script>
+        <script src="svgimg.js"></script>            
+        <!--<![endif]-->
 
-<!--<![endif]-->
-<!--[if IE]>Helllo<![endif]-->
+        <!--[if IE]>
+                <p>Sorry! Your browser is not up to date enough to see this feature!</p>
+        <![endif]-->
+
         <!-- end of smooth scrolling -->
 
         <!-- js for nav bar pin -->

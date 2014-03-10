@@ -19,8 +19,6 @@ body{
   height: 100%;
   width: 100%;
   background-attachment: fixed;
-  background-position-x: center !important;
-  background-position-y: -200px;
   background-position: center -200px; /*bug fix for firefox*/
   text-align: center;
 }
@@ -39,8 +37,6 @@ body{
 #live{
   background: url('bgheaderalt4.png') no-repeat top center;
   background-attachment: fixed;  
-  background-position-x: center !important;
-  background-position-y: -400px;
   background-position: center -400px; /*bug fix for firefox*/
   width:100%;
   color: #fff;

@@ -11,7 +11,7 @@ $(document).ready(function(){
             // and the formula is:
             //var random = Math.floor(Math.random() * (max - min + 1)) + min;
             //console.log(random);
-            if((7 < d.getHours()) && (d.getHours() < 19)){ //if between 6am and 7pm make 'daytime' theme
+            if((7 < d.getHours()) && (d.getHours() < 23)){ //if between 6am and 7pm make 'daytime' theme
                 $("head").append("<link rel='stylesheet' href='theme.css'>");
                 //$('link[rel=stylesheet][href~="theme.css"]').remove();
             }
