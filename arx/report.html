@@ -24,7 +24,9 @@
 
                 <p>This blog is already live on the client's website <a href="http://arcadefire.com" alt="Arcade Fire Website">viewable here</a>. We will discuss the work and process for this in a later section of this report.</p>
 
-                <p>As a brief summary, during this project we have used: XHTML, CSS, JavaScript, jQuery, PHP (minor for WordPress implementation), Photoshop, Gimp, Inkscape and attempted animation with SVGs, JavaScript and CSS. We have attempted to use as few CSS libraries as possible to focus on implementing things such as responsive design by hand.             
+                <p>As a brief summary, during this project we have used: XHTML, CSS, JavaScript, jQuery, PHP (minor for WordPress implementation), Photoshop, Gimp, Inkscape and attempted animation with SVGs, JavaScript and CSS. We have attempted to use as few CSS libraries as possible to focus on implementing things such as responsive design by hand. </p>
+
+                <p><strong>We had 2 CSS errors in main.css, however they are vital to the CSS animation of our page load element and for this reason we have left them in our CSS as requested by our client. This animation seems to work across all major browsers and seemed like CSS animation was a better option than using a .gif. We are unsure if this will reduce our mark so have made a note here that we are aware of it and have opted to keep it in.</strong></p>           
             </div>
 
             <div class="text" id="nav">
@@ -43,9 +45,14 @@
                 <p>Additional cosmetics and minutia were taken into consideration with the navigation bar. Namely, when the navigation bar is resting over the site header it's opactiy is decreased for aesthetic purposes. However, when it is over the website's content the opacity increases as to make sure the layout is unconfusing to a user. Furthermore, opacity increases again in the mobile layouts to act as an app navigation bar and as less of a style element. Finally, since old versions of Internet Explorer struggle with rgba values we included a regular rgb fall-back css value for the navigation bar.</p>
             </div>
 
+            <div class="text" id="moreresponse">
+                <h1>Further Responsive Design</h1>
+                <p>We attempted to make all elements of the site's design responsive to browser changes, including the album artwork resizing, columns realigning and sections re-designed for different sizes. We used % where possible for major elements, pixels for specific minor positioning and em when elements were related to fonts.</p>
+            </div>
+
             <div class="text" id="gogimp">
                 <h1>Animated Header Logo (.svg)</h1>
-                <p>We created a large svg version of Arcade Fire's logo as decoration to exist above the main header image using Inkscape.</p>
+                <p>We created a large svg version of Arcade Fire's logo as decoration to exist above the main header image using Inkscape. Using the opacity channel we were able to create the illusion of a steady fade upon scroll down, and used real SVG animation upon page load (this works in Chrome, but unsupported in Firefox).</p>
             </div>
 
             <div class="text" id="goink">
@@ -61,48 +68,68 @@
             </div>
 
 
-            <div class="text" id="goextra">
+            <div class="text" id="drawer">
                 <h1>Music Hidden Drawer</h1>
                 <p>We have implemented a hidden drawer in CSS and JavaScript for the Music section of the website. By animating the div and increasing the height we are able to create space for content to to extend on the option a user interacted with. The content divs for each option are hidden off the side of the page with height=0, when an option is pressed the jQuery checks to see if a content div currently occupies the space. If not, the option's selected respective content animates in from the side. Otherwise, the content currently occupying this area leaves and is replaced by a new div. This was a custom jQuery implementation tailored for this site's content and was by far the most time consuming aspect of the project as attempting to keep this section's design responsive was a lengthy and troublesome task.</p>
                 <p>When this drawer opens it displays extended information about the album, as well as a mockup of a music player and some buy links. We created the mockup music player in Photoshop, basing it on the Spotify app's styling. By creating a template of music player on one layer, with a secondary layer below for album artwork we were able to quickly create multiple music player mockups with the same dimensions and aesthetic. However, in the server side coursework we aim to implement a real custom music player. </p>
-                <p>Additionally in this section, we created animated windows on hover of the album artworks. This is a largely modified implementation of <a href="http://tympanus.net/Tutorials/OriginalHoverEffects/index6.html" alt="CSS tutorial">this tutorial</a> which we used to learn more about CSS animation.
+                <p>Additionally in this section, we created animated windows on hover of the album artworks. This is a largely modified implementation of <a href="http://tympanus.net/Tutorials/OriginalHoverEffects/index6.html" alt="CSS tutorial">this tutorial</a> which we used to learn more about CSS animation.</p>
             </div>
 
-            <div class="text" id="goextra">
+            <div class="text" id="loading">
                 <h1>'Loading...'</h1>
                 <p>We created a preloader that allows the site to have an air of professionalism while it loads. Instead of witnessing the images steadily load in front of a user, a loading catch page makes sure the site is not displayed until it is complete. Neither of us had experience with creating pre-loaders before, however we had attempted to implement lightboxes in a previous project and applying the same principle was able to create one quickly. </p>
                 <p>Using a fixed div that occupies the full height and width of the screen, containing only a CSS-animated rotating .png created in Photoshop, creates the illusion of a loading page while hiding the real page-load behind it. We use jQuery to notice when the page has finished loading and then fade out the elements of the the preloader. The jQuery fade out animations were modified from an old lightbox implementation, which came from a tutorial used for self-study last year.</p>
             </div>
 
 
-            <div class="text" id="goextra">
+            <div class="text" id="carousel">
                 <h1>Video Carousel</h1>
+                <p>We implemented a placeholder video carousel that interacted with YouTube embeds to create a working video player. We had to use YouTube embeds as per the request of our client, their social statistics are important for radio, however such embeds require iFrames which SAFE does not seem to agree with. To detail this anyway, we created a custom play/pause button for the focus video, next/previous video button to change focus video, and animated thumbnails below into a loop carousel.</p>
+                <p>This was also a time consuming part of the project as learning how to interact with YouTube videos (in order to pause the one leaving the screen, avoiding multiple players with audio going at once) was not something we were previously experienced with. </p> 
                 <p>To see this implementation in a working state (including the YouTube video custom play/pause instructions) visit here: <a href="http://cyoa.co.uk/jordan/sub/" alt="Web Tech Submission">alternative host</a>.</p>
             </div>
 
             <div class="text" id="gallery">
                 <h1>Circular Image Gallery</h1>
-                <p>Text here</p>
+                <p>We implemented a simple image flow gallery where a single image changes to multiple different source images by animation. This was done following the tutorial of <a href="http://paulmason.name/item/simple-jquery-carousel-slider-tutorial" alt="Paul Mason Tutorial">Paul Mason</a> as an exercise of using transparent area of images for decoration.</p>
+                <p>While the jQuery is simple for this gallery, we added an extra effect by creating all of the images for the gallery in Photoshop. We created a template size and included all of the images on seperate layers, before placing a circle object over the top of them. By selecting the outline of the circle and then selecting inverse, before returning to an image layer and deleting the 'outside' of the circle it made it appear as though all the images are peering through a circular window due to their .png transparency.</p>
             </div>
 
             <div class="text" id="themecss">
                 <h1>Day and Night CSS Themes</h1>
-                <p>Text here</p>
+                <p>We created an alternate CSS file named theme.css. When this is added to the document, it overwrites some of the key styles on the page (nav bar, headers, etc) taking the site from a black and white dark theme to a colourful light theme.</p>
+                <p>We decided to use jQuery to get the current time and, if it's currently daytime, set the light theme, otherwise set the darker theme.</p>
+                <p>Originally we had themes selected based on a random integer, but too many themes made it a confusing user experience each time you refreshed. If a user prefers a particular theme, we have added a theme selection hyperlink to the footer's navigation. This seems to have some issues within SAFE in some browsers, however runs perfectly on the Node server with all browsers as well as locally and on our own hosting. I have uploaded a working version here: <a href="http://cyoa.co.uk/jordan/sub/" alt="mirrored upload">alternative upload</a>.</p>
             </div>
 
             <div class="text" id="konami">
                 <h1>Konami Code Keyboard Easter Egg</h1>
-                <p>Text here</p>
+                <p>If you press 'up up down down left right left right b a' on our site you will be taken to a surprise page. We used a Konami Code tutorial to learn how this is implemented on other sites and implemented it purely for fun, and for the learning experience.</p>
             </div>
 
             <div class="text" id="svgpaint">
                 <h1>Interactive SVG Neon Bible</h1>
-                <p>Text here</p>
+                <p>We created an Inkscape version of Arcade Fire's Neon Bible album cover, and used dynamic control over the SVG's paths to make a fun neon painting mini game where users are able to paint Neon Bible in colours selected at random upon click.</p>
             </div>
 
-            <div class="text" id="svgpaint">
+            <div class="text" id="wordpress">
                 <h1>WordPress</h1>
-                <p>Text here</p>
+                <p>Extensive CSS, JavaScript and some PHP was employed to re-skin a WordPress template for the current <a href="http://arcadefire.com" alt="arcade fire blog">arcadefire.com</a> site. Once again we made this site design responsive for mobile and tablet, and connected the theme of the layout with the main site.</p>
+                <p>We did not include these files in our submission as the WordPress requirements mean they will not adhere to the standards required, however we have uploaded the work we undertook for these parts of the project to <a href="http://cyoa.co.uk/jordan/webtechextras" alt="web tech extras">our own site</a> if you'd like to see.</p>
+            </div>
+
+            <div class="text" id="browser">
+                <h1>Cross-browser compatibility</h1>
+                <p>Our site works perfectly as required in Chrome, Firefox and Internet Explorer 9 after including some minor CSS fall-backs to cater for the differences between these browsers. We have also catered for previous versions of Internet Explorer by including fall-back CSS stylesheets tailored to them - these particularly focus on the browser's lack of support for transparency and opacity effects.</p>
+                <p>As the version of IE degrades, less of our site is supported, however instead of allowing the site to break and become a mess we attempted to degrade the site gracefully by removing the broken elements in these browsers and replacing them with less-functional elements.</p>
+            </div>
+
+                <div class="text" id="design">
+                <h1>Designing</h1>
+                <p>All of the custom buttons for our site, and the entirety of both blog and site's designs were first mocked up in Photoshop to allow stylistic choices and additional artistic exploration.</p>
+                <div class="textimg"><img src="screenshot2.png" alt="photoshop" /></div>
+                <p>As an experienced Photoshop and Gimp user, using multi-layer effects to create a dream design allows much more ambitious final design goal.</p>
+                <div class="textimg"><img src="screenshot3.png" alt="photoshop" /></div>
             </div>
 
 
